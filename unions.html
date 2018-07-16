@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8"/>
+        <title>Online programming tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+
+        <!-- GLOBAL MANDATORY STYLES -->
+        <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+        <link href="static/vendor/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+        <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- PAGE LEVEL PLUGIN STYLES -->
+        <link href="static/css/animate.css" rel="stylesheet">
+        <link href="static/vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- THEME STYLES -->
+        <link href="static/css/layout1.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico"/>
+        <!-- END HEAD -->
+	  <style>
+    a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+   border-radius: 8px;
+	margin: 24px 250px;
+	padding : 12px 34px;
+    font-size : 18px;
+    background-color: #33adff;
+    color: black;
+}
+.previous1 {
+   border-radius: 8px;
+	margin: 24px -30px;
+	padding : 12px 34px;
+    font-size : 18px;
+    background-color: #ff6699;
+    color: black;
+}
+.example {
+    margin-left: 110px;
+    padding:20px;
+    width : 1050px;
+  background-color: #f2f2f2;
+  background-style:ridge;
+  color: black;
+}
+
+.next {
+   border-radius: 8px;
+  margin: 24px 180px;
+	padding : 12px 34px;
+    font-size : 20px;
+    background-color: #4dff4d;
+    color: black;
+}
+
+	  .main {
+            margin-left: 120px;
+            font-size:20px;
+            color : #000000; /* Same as the width of the sidenav */
+        }
+        .main1 {
+                margin-left: 50px;
+                font-size:20px;
+                color : #000000; /* Same as the width of the sidenav */
+            }
+#sidenav h2 {
+font-size:21px;
+padding-left:16px;
+margin:-4px 0 4px 0;
+width:204px;
+}
+#sidenav a {font-family:"Segoe UI",Arial,sans-serif;text-decoration:none;display:block;padding:2px 1px 1px 16px}
+#sidenav a:hover,#sidenav a:focus {color:#000000;background-color:#4d94ff;}
+#sidenav a.active {background-color:#66ff66;color:black}
+
+#leftmenuinner {
+position:fixed;
+top:0;
+padding-top:95px;
+padding-bottom:0;
+height:100%;
+width:220px;
+background-color:transparent;
+}
+#leftmenuinnerinner {
+height:100%;
+width:100%;
+overflow-y:scroll;
+overflow-x:hidden;
+padding-top:20px;
+}
+
+#leftmenuinnerinner {overflow-y:scroll}
+.bottomad {float:none;text-align:center}
+#skyscraper {min-height:60px}
+}
+.p {
+  text-color: #ff0000;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+p.ex1 {
+    margin-right:50px;
+}
+</style>
+  </head>
+    <!-- END HEAD -->
+    <!-- BODY -->
+    <body id="body" data-spy="scroll" data-target=".header">
+        <!--========== HEADER ==========-->
+        <header class="header navbar-fixed-top">
+            <!-- Navbar -->
+            <nav class="navbar" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="menu-container js_nav-item">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="toggle-icon"></span>
+                        </button>
+
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a class="logo-wrap" href="#body">
+                                <img class="logo-img logo-img-main-active" src="static/img/logo-dark.png" alt="Asentus Logo">
+                            </a>
+                        </div>
+                        <!-- End Logo -->
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse nav-collapse">
+                        <div class="main-container">
+                            <ul class="nav navbar-nav navbar-nav-right">
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="/homepage">Home</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="/">Logout</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                    <!-- End Navbar Collapse -->
+                </div>
+            </nav>
+            <!-- Navbar -->
+        </header>
+        <!--========== END HEADER ==========-->
+        <br><BR><BR><BR><BR>
+<body style="width:95%">
+<div class = "main">
+  <h1 align = "center" style="color:#33adff;">Unions</h1>
+  <p class = "main">Unions are user-defined data type in C, which is used to store a collection of different kinds of data, just like a structure. However, with unions, you can only store information in one field at any one time.
+    <br>
+    <ul><ul><ul><ul><li style="font-size:20px">Unions are like structures except it used less memory.</li>
+<li style="font-size:20px">The keyword union is used to declare the structure in C.</li>
+<li style="font-size:20px">Variables inside the union are called members of the union.</li>
+</ul></ul></ul></ul>
+<p class = "main">Syntax:
+  <p class = "example"><br>union unionName
+    <br>
+{
+  <br>
+   //member definitions
+   <br>
+};
+<br>
+<p class = "main">Example:
+  <p class = "example"><br>
+union Courses
+<br>
+{
+  <br>
+   char  WebSite[50];<br>
+   char  Subject[50];<br>
+   int   Price;<br>
+};<br>
+<p class = "main" style="font-size:30px">Accessing Union Members in C
+  <p class = "main">Example
+  <p class = "example"> <br> #include< stdio.h ><br>
+#include< string.h >
+<br>
+union Courses<br>
+{<br>
+   char  WebSite[50];<br>
+   char  Subject[50];<br>
+   int   Price;<br>
+};<br>
+
+void main( )<br>
+{<br>
+   union Courses C;<br>
+
+   strcpy( C.WebSite, "w3schools.in");   <br>
+   printf( "WebSite : %s\n", C.WebSite);<br>
+
+   strcpy( C.Subject, "The C Programming Language");    <br>
+   printf( "Book Author : %s\n", C.Subject);<br>
+
+   C.Price = 0;<br>
+   printf( "Book Price : %d\n", C.Price);<br>
+}<br>
+<p class = "example"><br>
+WebSite : w3schools.in<br>
+Book Author: The C Programming Language<br>
+Book Price : 0<br>
+
+
+
+
+
+
+</div><a href="/structures" class="previous">&laquo; Previous</a>
+      <a href="#" class="previous1">Take Assessment</a>
+<a href="/files" class="next">Next &raquo;</a>
+
+
+      <div class='w3-sidebar w3-collapse' id='sidenav'>
+          <div id='leftmenuinner'>
+          <div class='w3-light-grey' id='leftmenuinnerinner'>
+          <h2 align = "center">C</h2><p>
+              <p class = "main1">Introduction<br><p>
+          <a target="_top" href="/c">About C</a>
+          <a target="_top" href="/programstructure">ProgramStructure</a>
+          <a target="_top" href="/io">Input And Output</a>
+          <a target="_top" href="/format">Format Specifiers</a>
+          <a target="_top" href="/tokens">Tokens</a>
+          <a target="_top" href="/identifiers">Identifiers</a>
+          <a target="_top" href="/keywords">keywords</a>
+          <a target="_top"  href="/constants">Constants</a>
+          <a target="_top" href="/operators">Operators</a>
+          <a target="_top"  href="/datatypes">Datatypes</a>
+          <a target="_top"   href="/variables">variables</a>
+          <a target="_top"  href="/storage">Storage Classes</a>
+          <a target="_top" href="/pre">Preprocessors</a>
+          <a target="_top"  href="/header1">HeaderFiles</a>
+          <a target="_top" href="/typecaste">Typecasting</a>
+            <p class = "main1">FlowControl<br><p>
+          <a target="_top"href="/decision">Decision making</a>
+
+          <a target="_top" href="/ifstatements">If Statements</a>
+          <a target="_top" href="/ifelsestatements">If-Else Statements</a>
+          <a target="_top" href="/nested">Nested if-else Statements</a>
+            <a target="_top" href="/elseif">ELse-if Statements</a>
+          <a target="_top" href="/switch">Switch Statements</a>
+          <a target="_top" href="/loops">C Loops</a>
+            <p class = "main1">Functions<br><p>
+          <a target="_top" href="/functions">C Functions</a>
+          <a target="_top" href="/arrays">C Arrays</a>
+          <a target="_top" href="/strings">C Strings</a>
+          <a target="_top" href="/pointers">C Pointers</a>
+          <p class = "main">Structure Union<br><p>
+          <a target="_top" href="/structures">C Structures</a>
+          <a target="_top" a class = "active" href="/unions">C Unions</a>
+          <a target="_top" href="/files">C Files</a>
+          <a target="_top" href="howto_js_topnav.asp">Top Navigation</a>
+          <a target="_top" href="howto_js_topnav_responsive.asp">Responsive Topnav</a>
+          <a target="_top" href="howto_css_searchbar.asp">Search Bar</a>
+          <a target="_top" href="howto_css_fixed_sidebar.asp">Fixed Sidebar</a>
+          <a target="_top" href="howto_js_sidenav.asp">Side Navigation</a>
+          <a target="_top" href="howto_js_fullscreen_overlay.asp">Fullscreen Navigation</a>
+          <a target="_top" href="howto_js_off-canvas.asp">Off-Canvas Menu</a>
+          <a target="_top" href="howto_css_sidenav_buttons.asp">Hover Sidenav Buttons</a>
+          <a target="_top" href="howto_css_menu_horizontal_scroll.asp">Horizontal Scroll Menu</a>
+          <a target="_top" href="howto_cp">Vertical Menu</a>
+          <a target="_top" href="howto_css_bottom_nav.asp">Bottom Navigation</a>
+          <a target="_top" href="howto_js_bottom_nav_responsive.asp">Responsive Bottom Nav</a>
+          <a target="_top" href="howto_css_navbar_border.asp">Bottom Border Nav Links</a>
+          <a target="_top" href="howto_css_topnav_right.asp">Right Aligned Menu Links</a>
+          <a target="_top" href="howto_css_fixed_menu.asp">Fixed Menu</a>
+          <a target="_top" href="howto_js_navbar_slide.asp">Slide Down Bar on Scroll</a>
+          <a target="_top" href="howto_js_navbar_sticky.asp">Sticky Navbar</a>
+          <a target="_top" href="howto_css_dropdown.asp">Hover Dropdowns</a>
+          <a target="_top" href="howto_js_dropdown.asp">Click Dropdowns</a>
+          <a target="_top" href="howto_css_dropdown_navbar.asp">Dropdown in Topnav</a>
+          <a target="_top" href="howto_js_dropdown_sidenav.asp">Dropdown in Sidenav</a>
+          <a target="_top" href="howto_js_responsive_navbar_dropdown.asp">Resp Navbar Dropdown</a>
+          <a target="_top" href="howto_css_dropup.asp">Dropup</a>
+          <a target="_top" href="howto_css_mega_menu.asp">Mega Menu</a>
+          <a target="_top" href="howto_css_pagination.asp">Pagination</a>
+          <a target="_top" href="howto_css_breadcrumbs.asp">Breadcrumbs</a>
+          <a target="_top" href="howto_css_button_group.asp">Button Group</a>
+          <a target="_top" href="howto_css_button_group_vertical.asp">Vertical Button Group</a>
+          <a target="_top" href="howto_css_responsive_header.asp">Responsive Header</a>
+          <br>
+        </p>
+    <!-- Back To Top -->
+    <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+
+    <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+    <!-- CORE PLUGINS -->
+    <script src="static/vendor/jquery.min.js" type="text/javascript"></script>
+    <script src="static/vendor/jquery-migrate.min.js" type="text/javascript"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <!-- PAGE LEVEL PLUGINS -->
+    <script src="static/vendor/jquery.easing.js" type="text/javascript"></script>
+    <script src="static/vendor/jquery.back-to-top.js" type="text/javascript"></script>
+    <script src="static/vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
+    <script src="static/vendor/jquery.wow.min.js" type="text/javascript"></script>
+    <script src="static/vendor/swiper/js/swiper.jquery.min.js" type="text/javascript"></script>
+    <script src="static/vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+    <script src="static/vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+
+    <!-- PAGE LEVEL SCRIPTS -->
+    <script src="static/js/layout.min.js" type="text/javascript"></script>
+    <script src="static/js/components/wow.min.js" type="text/javascript"></script>
+    <script src="static/js/components/swiper.min.js" type="text/javascript"></script>
+    <script src="static/js/components/masonry.min.js" type="text/javascript"></script>
+
+</body>
+<!-- END BODY -->
+</html>

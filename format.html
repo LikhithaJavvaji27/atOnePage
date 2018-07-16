@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8"/>
+        <title>Online programming tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+
+        <!-- GLOBAL MANDATORY STYLES -->
+        <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+        <link href="static/vendor/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+        <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- PAGE LEVEL PLUGIN STYLES -->
+        <link href="static/css/animate.css" rel="stylesheet">
+        <link href="static/vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- THEME STYLES -->
+        <link href="static/css/layout1.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico"/>
+        <!-- END HEAD -->
+	  <style>
+    a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+   border-radius: 8px;
+	margin: 24px 250px;
+	padding : 12px 34px;
+    font-size : 18px;
+    background-color: #33adff;
+    color: black;
+}
+.previous1 {
+   border-radius: 8px;
+	margin: 24px -30px;
+	padding : 12px 34px;
+    font-size : 18px;
+    background-color: #ff6699;
+    color: black;
+}
+.example {
+    margin-left: 110px;
+    width : 1050px;
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.next {
+   border-radius: 8px;
+  margin: 24px 180px;
+	padding : 12px 34px;
+    font-size : 20px;
+    background-color: #4dff4d;
+    color: black;
+}
+
+	  .main {
+            margin-left: 120px;
+            font-size:20px;
+            color : #000000; /* Same as the width of the sidenav */
+        }
+#sidenav h2 {
+font-size:21px;
+padding-left:16px;
+margin:-4px 0 4px 0;
+width:204px;
+}
+#sidenav a {font-family:"Segoe UI",Arial,sans-serif;text-decoration:none;display:block;padding:2px 1px 1px 16px}
+#sidenav a:hover,#sidenav a:focus {color:#000000;background-color:#4d94ff;}
+#sidenav a.active {background-color:#66ff66;color:black}
+
+#leftmenuinner {
+position:fixed;
+top:0;
+padding-top:95px;
+padding-bottom:0;
+height:100%;
+width:220px;
+background-color:transparent;
+}
+#leftmenuinnerinner {
+height:100%;
+width:100%;
+overflow-y:scroll;
+overflow-x:hidden;
+padding-top:20px;
+}
+
+#leftmenuinnerinner {overflow-y:scroll}
+.bottomad {float:none;text-align:center}
+#skyscraper {min-height:60px}
+}
+.p {
+  text-color: #ff0000;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+p.ex1 {
+    margin-right:50px;
+}
+</style>
+  </head>
+    <!-- END HEAD -->
+    <!-- BODY -->
+    <body id="body" data-spy="scroll" data-target=".header">
+        <!--========== HEADER ==========-->
+        <header class="header navbar-fixed-top">
+            <!-- Navbar -->
+            <nav class="navbar" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="menu-container js_nav-item">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="toggle-icon"></span>
+                        </button>
+
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a class="logo-wrap" href="#body">
+                                <img class="logo-img logo-img-main-active" src="static/img/logo-dark.png" alt="Asentus Logo">
+                            </a>
+                        </div>
+                        <!-- End Logo -->
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse nav-collapse">
+                        <div class="main-container">
+                            <ul class="nav navbar-nav navbar-nav-right">
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="/homepage">Home</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="/">Logout</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                    <!-- End Navbar Collapse -->
+                </div>
+            </nav>
+            <!-- Navbar -->
+        </header>
+        <!--========== END HEADER ==========-->
+        <br><BR><BR><BR><BR>
+<body style="width:95%">
+<div class = "main">
+  <h1 align = "center" style="color:#33adff;">Format Specifiers</h1>
+  <p class = "main">Format specifiers can be defined as the operators which are used in association with <b>printf()</b> function for printing the data that is referred by any object or any variable. When a value is stored in a particular variable, then you cannot print the value stored in the variable straightforwardly without using the format specifiers. You can retrieve the data that are stored in the variables and can print them onto the console screen by implementing these format specifiers in a printf() function.
+  <br>
+  <br>
+  Format specifiers start with a percentage <b> % </b> operator and followed by a special character for identifying the type of the data.
+  <br>
+  There are mostly <b>six types of format specifiers</b> that are available in C.
+  <p class = "main">List Of Format Specifiers in c
+  <p class = "main">
+  <table align = "center" style="width:50%">
+    <tr style = "background-color:lightblue">
+      <td>Format Specifier</td>
+      <td>Description</td>
+    </tr>
+    <tr>
+      <td>%d</td>
+      <td>Integer Format Specifier</td>
+    </tr>
+    <tr>
+      <td>%f</td>
+      <td>Float Format Specifier</td>
+    </tr>
+    <tr>
+      <td>%c</td>
+      <td>Character Format Specifier</td>
+    </tr>
+    <tr>
+      <td>%s</td>
+      <td>String Format Specifier</td>
+    </tr>
+    <tr>
+      <td>%u</td>
+      <td>Unsigned Integer Format Specifier</td>
+    </tr>
+    <tr>
+      <td>%ld</td>
+      <td>Long Int Format Specifier</td>
+    </tr>
+
+  </table>
+  <br>
+  <p class = "main" style = "font-size:25px">Integer Format Specifier %d
+    <p class = "main">The <b>%d</b> format specifier is implemented for representing integer values. This is used with printf() function for printing the integer value stored in the variable.
+  <p class  = "main" style = "font-size:15px" style = "color:red">Syntax:
+  <p class = "example"><br>printf("%d",< variable name >);<br>
+  <br>
+  <p class = "main" style = "font-size:25px">Float Format Specifier %f
+    <p class = "main">The <b>%f</b> format specifier is implemented for representing fractional values. This is implemented within printf() function for printing the fractional or floating value stored in the variable. Whenever you need to print any fractional or floating data, you have to use %f format specifier.
+      <p class  = "main" style = "font-size:15px" style = "color:red">Syntax:
+  <p class = "example"><br>printf("%f",< variable name >);<br>
+  <br>
+  <p class = "main" style = "font-size:25px">Character Format Specifier %c
+   <p class = "main">The <b>%c</b> format specifier is implemented for representing characters. This is used with printf() function for printing the character stored in a variable. When you want to print a character data, you should incorporate the %c format specifier.
+     <p class  = "main" style = "font-size:15px" style = "color:red">Syntax:
+ <p class = "example"><br>printf("%c",< variable name >);<br>
+<br>
+  <p class = "main" style = "font-size:25px">String Format Specifier %s
+  <p class = "main">The <b>%s</b> format specifier is implemented for representing strings. This is used in printf() function for printing a string stored in the character array variable. When you have to print a string, you should implement the %s format specifier.
+    <p class  = "main" style = "font-size:15px" style = "color:red">Syntax:
+   <p class = "example"><br>printf("%s",< variable name >);<br>
+<br>
+<p class = "main" style = "font-size:25px">Unsigned Integer Format Specifier %u
+<p class = "main">The <b>%u</b>format specifier is implemented for fetching values from the address of a variable having unsigned decimal integer stored in the memory. This is used within printf() function for printing the unsigned integer variable.
+  <p class  = "main" style = "font-size:15px" style = "color:red">Syntax:
+ <p class = "example"><br>printf("%u",< variable name >);<br>
+<br>
+<p class = "main" style = "font-size:25px">Long Int Format Specifier %ld
+<p class = "main">The <b>%ld</b> format specifier is implemented for representing long integer values. This is implemented with printf() function for printing the long integer value stored in the variable.
+  <p class  = "main" style = "font-size:15px" style = "color:red">Syntax:
+ <p class = "example"><br>printf("%ld",< variable name >);<br>
+<br>
+
+</div><a href="/io" class="previous">&laquo; Previous</a>
+      <a href="#" class="previous1">Take Assessment</a>
+<a href="/tokens" class="next">Next &raquo;</a>
+
+
+      <div class='w3-sidebar w3-collapse' id='sidenav'>
+          <div id='leftmenuinner'>
+          <div class='w3-light-grey' id='leftmenuinnerinner'>
+          <h2 align = "center">C</h2><p>
+            <p class = "main1">C Introduction<br><p>
+          <a target="_top" href="/c">Introduction</a>
+          <a target="_top" href="/programstructure">ProgramStructure</a>
+          <a target="_top" href="/io">Input And Output</a>
+          <a target="_top" a class = "active" href="/format">Format Specifiers</a>
+          <p class = "main1">Declaration&Assignments<br><p>
+          <a target="_top"  href="/tokens">Tokens</a>
+          <a target="_top"  href="/identifiers">Identifiers</a>
+          <a target="_top" href="/keywords">keywords</a>
+          <a target="_top" href="/constants">Constants</a>
+          <a target="_top" href="/operators">Operators</a>
+          <a target="_top" href="/datatypes">Datatypes</a>
+          <a target="_top"   href="/variables">variables</a>
+          <a target="_top" href="/storage">Storage Classes</a>
+          <a target="_top" href="/pre">Preprocessors</a>
+          <a target="_top" href="/header1">HeaderFiles</a>
+          <a target="_top" href="/typecaste">Typecasting</a>
+          <p class = "main1">FlowControl<br><p>
+          <a target="_top" href="/decision">Decision making</a>
+          <a target="_top" href="/ifstatements">If Statements</a>
+          <a target="_top" href="/ifelsestatements">If-Else Statements</a>
+          <a target="_top" href="/nested">Nested if-else Statements</a>
+            <a target="_top" href="/elseif">ELse-if Statements</a>
+            <a target="_top" href="/switch">Switch Statements</a>
+            <a target="_top" href="/loops">C Loops</a>
+            <p class = "main1">Functions<br><p>
+            <a target="_top" href="/functions">C Functions</a>
+            <a target="_top" href="/variables">C Variablescope</a>
+           <a target="_top" href="/recursion">C Recursion</a>
+
+            <p class = "main1">Arrays<br><p>
+            <a target="_top" href="/arrays">C Arrays</a>
+            <a target="_top" href="/strings">C Strings</a>
+            <p class = "main1">Pointers<br><p>
+
+            <a target="_top" href="/pointers">C Pointers</a>
+            <p class = "main1">Structures Unions<br><p>
+
+            <a target="_top" href="/structures">C Structures</a>
+            <a target="_top"  href="/unions">C Unions</a>
+            <p class = "main1">Files<br><p>
+
+            <a target="_top" href="/files">C Files</a>
+            <a target="_top" href="/open">C fopen</a>
+           <a target="_top" href="/close">C fclose</a>
+           <a target="_top" href="/gets">C fgets</a>
+           <a target="_top" href="/puts">C fputs</a>
+           <a target="_top" href="/eof">C feof</a>
+
+          <br>
+        </p>
+    <!-- Back To Top -->
+    <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+
+    <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+    <!-- CORE PLUGINS -->
+    <script src="static/vendor/jquery.min.js" type="text/javascript"></script>
+    <script src="static/vendor/jquery-migrate.min.js" type="text/javascript"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <!-- PAGE LEVEL PLUGINS -->
+    <script src="static/vendor/jquery.easing.js" type="text/javascript"></script>
+    <script src="static/vendor/jquery.back-to-top.js" type="text/javascript"></script>
+    <script src="static/vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
+    <script src="static/vendor/jquery.wow.min.js" type="text/javascript"></script>
+    <script src="static/vendor/swiper/js/swiper.jquery.min.js" type="text/javascript"></script>
+    <script src="static/vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+    <script src="static/vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+
+    <!-- PAGE LEVEL SCRIPTS -->
+    <script src="static/js/layout.min.js" type="text/javascript"></script>
+    <script src="static/js/components/wow.min.js" type="text/javascript"></script>
+    <script src="static/js/components/swiper.min.js" type="text/javascript"></script>
+    <script src="static/js/components/masonry.min.js" type="text/javascript"></script>
+
+</body>
+<!-- END BODY -->
+</html>

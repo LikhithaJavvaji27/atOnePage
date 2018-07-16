@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8"/>
+        <title>Online programming tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+
+        <!-- GLOBAL MANDATORY STYLES -->
+        <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+        <link href="static/vendor/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+        <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- PAGE LEVEL PLUGIN STYLES -->
+        <link href="static/css/animate.css" rel="stylesheet">
+        <link href="static/vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- THEME STYLES -->
+        <link href="static/css/layout1.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico"/>
+        <!-- END HEAD -->
+	  <style>
+    a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+   border-radius: 8px;
+	margin: 24px 250px;
+	padding : 12px 34px;
+    font-size : 18px;
+    background-color: #33adff;
+    color: black;
+}
+.previous1 {
+   border-radius: 8px;
+	margin: 24px -30px;
+	padding : 12px 34px;
+    font-size : 18px;
+    background-color: #ff6699;
+    color: black;
+}
+.example {
+    margin-left: 140px;
+     padding: 20px;
+    width : 1050px;
+  background-color: #f2f2f2;
+  border-style: ridge;
+  color: black;
+}
+
+.next {
+   border-radius: 8px;
+  margin: 24px 180px;
+	padding : 12px 34px;
+    font-size : 20px;
+    background-color: #4dff4d;
+    color: black;
+}
+
+	  .main {
+            margin-left: 120px;
+            font-size:20px;
+            color : #000000; /* Same as the width of the sidenav */
+        }
+#sidenav h2 {
+font-size:21px;
+padding-left:16px;
+margin:-4px 0 4px 0;
+width:204px;
+}
+#sidenav a {font-family:"Segoe UI",Arial,sans-serif;text-decoration:none;display:block;padding:2px 1px 1px 16px}
+#sidenav a:hover,#sidenav a:focus {color:#000000;background-color:#4d94ff;}
+#sidenav a.active {background-color:#66ff66;color:black}
+
+#leftmenuinner {
+position:fixed;
+top:0;
+padding-top:95px;
+padding-bottom:0;
+height:100%;
+width:220px;
+background-color:transparent;
+}
+#leftmenuinnerinner {
+height:100%;
+width:100%;
+overflow-y:scroll;
+overflow-x:hidden;
+padding-top:20px;
+}
+
+#leftmenuinnerinner {overflow-y:scroll}
+.bottomad {float:none;text-align:center}
+#skyscraper {min-height:60px}
+}
+.p {
+  text-color: #ff0000;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+p.ex1 {
+    margin-right:50px;
+}
+.main1 {
+        margin-left: 50px;
+        font-size:20px;
+
+        color : #000000; /* Same as the width of the sidenav */
+    }
+</style>
+  </head>
+    <!-- END HEAD -->
+    <!-- BODY -->
+    <body id="body" data-spy="scroll" data-target=".header">
+        <!--========== HEADER ==========-->
+        <header class="header navbar-fixed-top">
+            <!-- Navbar -->
+            <nav class="navbar" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="menu-container js_nav-item">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="toggle-icon"></span>
+                        </button>
+
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a class="logo-wrap" href="#body">
+                                <img class="logo-img logo-img-main-active" src="static/img/logo-dark.png" alt="Asentus Logo">
+                            </a>
+                        </div>
+                        <!-- End Logo -->
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse nav-collapse">
+                        <div class="main-container">
+                            <ul class="nav navbar-nav navbar-nav-right">
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="/homepage">Home</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="/">Logout</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                    <!-- End Navbar Collapse -->
+                </div>
+            </nav>
+            <!-- Navbar -->
+        </header>
+        <!--========== END HEADER ==========-->
+        <br><BR><BR><BR><BR>
+<body style="width:95%">
+
+<div class="main">
+              <h1 align = "center" style="color:#33adff;">Python Package</h1>
+            <br>  <p class = "main"><h3  style = "font-size:25px"><ul><ul><ul>What are packages?</ul></h3><p class = "main">
+              We don't usually store all of our files in our computer in the same location. We use a well-organized hierarchy of directories for easier access.
+<br><br>
+Similar files are kept in the same directory, for example, we may keep all the songs in the "music" directory. Analogous to this, Python has packages for directories and modules for files.
+<br><br>
+As our application program grows larger in size with a lot of modules, we place similar modules in one package and different modules in different packages. This makes a project (program) easy to manage and conceptually clear.
+<br><br>
+Similar, as a directory can contain sub-directories and files, a Python package can have sub-packages and modules.
+<br><br>
+A directory must contain a file named __init__.py in order for Python to consider it as a package. This file can be left empty but we generally place the initialization code for that package in this file.
+<br><br>
+Here is an example. Suppose we are developing a game, one possible organization of packages and modules could be as shown in the figure below.<br>
+<p align = "center" class = "main"><img class="img-responsive" src="static/img/970x647/19.jpg" alt="Python Image">
+<p class = "main"><h3  style = "font-size:25px"><ul><ul><ul>Importing module from a package</ul></h3><p class = "main">
+<p class = "main"> We can import modules from packages using the dot (.) operator.
+<br>
+For example, if want to import the start module in the above example, it is done as follows. <br>
+     <p class = "example"  style = "font-size:17px">
+              import Game.Level.start<br>
+
+
+          <p class = "main"> Now if this module contains a function named select_difficulty(), we must use the full name to reference it.<br>
+  <p class = "example"  style = "font-size:17px">Game.Level.start.select_difficulty(2)<br>
+
+<p class = "main">If this construct seems lengthy, we can import the module without the package prefix as follows.
+<br>
+<p class = "example"  style = "font-size:17px">from Game.Level import start<br>
+<p class = "main">We can now call the function simply as follows.
+<br>
+      <p class = "example"  style = "font-size:17px">start.select_difficulty(2)<br>
+
+
+<p class = "main">
+Yet another way of importing just the required function (or class or variable) form a module within a package would be as follows.<br>
+<p class = "example"  style = "font-size:17px">from Game.Level.start import select_difficulty<br>
+
+<p class = "main">
+Now we can directly call this function.<br>
+
+<p class = "example"  style = "font-size:17px">select_difficulty(2)<br>
+<p class = "main">
+  Although easier, this method is not recommended. Using the full namespace avoids confusion and prevents two same identifier names from colliding.
+  <br>
+  While importing packages, Python looks in the list of directories defined in sys.path, similar as for module search path.<br>
+
+</div><a href="/modules" class="previous">&laquo; Previous</a>
+      <a href="#" class="previous1">Take Assessment</a>
+<a href="/number" class="next">Next &raquo;</a>
+
+
+      <div class='w3-sidebar w3-collapse' id='sidenav'>
+          <div id='leftmenuinner'>
+          <div class='w3-light-grey' id='leftmenuinnerinner'>
+          <h2 align = "center">PYTHON</h2><p>
+          <p class = "main1">Introduction<br><p>
+            <a target="_top" href="/python">Getting Started</a>
+          <a target="_top" href="/silent">Silent features</a>
+          <a target="_top"   href="/domain">Domain</a>
+          <a target="_top" href="/syntax">Basic syntax</a>
+          <a target="_top"  href="/variables">Variables</a>
+          <a target="_top"  href="/dataTypes">Data Types</a>
+          <a target="_top" href="/typeConversion">Type Conversion</a>
+            <a target="_top" href="/input">I/O and Import</a>
+            <a target="_top" href="/operators">Operators</a>
+            <a target="_top" href="/nameSpace">Name Space</a>
+            <p class = "main1">Flow Control<br><p>
+            <a target="_top"  href="/ifelse">if...else</a>
+            <a target="_top" href="/forLoop">For Loop</a>
+            <a target="_top" href="/while1">While Loop</a>
+            <a target="_top"  href="/breakContinue">Break and continue</a>
+            <a target="_top"  href="/pass1">Pass</a>
+            <p class = "main1">Functions<br><p>
+            <a target="_top" href="/function">Function</a>
+            <a target="_top"  href="/argument">Argument</a>
+            <a target="_top"  href="/recursion">Recursion</a>
+            <a target="_top" href="/anonymous">Anonymous Function</a>
+            <a target="_top" href="/globalLocal">Global, Local and Nonlocal</a>
+            <a target="_top"  href="/global1">Global Keyword</a>
+            <a target="_top"  href="/modules">Modules</a>
+            <a target="_top" a class = "active" href="/package">Package</a>
+              <p class = "main1">Datatypes<br><p>
+            <a target="_top" href="/number">Number</a>
+            <a target="_top" href="/list">List</a>
+            <a target="_top" href="/tuple">Tuple</a>
+            <a target="_top" href="/string">String</a>
+            <a target="_top" href="/set">Set</a>
+            <a target="_top" href="/dictionary">Dictionary</a>
+            <a target="_top" href="/nested">Nested Dictionary</a>
+            <a target="_top" href="/arrays">Arrays</a>
+            <a target="_top" href="/matrix">Matrix</a>
+            <a target="_top" href="/listCompre">List Comprehension</a>
+            <p class = "main1">Python Files<br><p>
+            <a target="_top" href="/fileOperation">File Operation</a>
+            <a target="_top" href="/directory">Directory</a>
+            <a target="_top" href="/exception">Exception</a>
+            <a target="_top" href="/exceptionHand">Exception Handling</a>
+            <a target="_top" href="/userDefined">User-defined Exception</a>
+              <p class = "main1">Object Class<br><p>
+                <a target="_top" href="/oop">Python OOP</a>
+                <a target="_top" href="/class1">Class</a>
+                <a target="_top" href="/inheritance">Inheritance</a>
+                <a target="_top" href="/multipleInterit">Multiple Inheritance</a>
+                <a target="_top" href="/overloading">Operator Overloading</a>
+            <br>
+          </p>
+    <!-- Back To Top -->
+    <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+
+    <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+    <!-- CORE PLUGINS -->
+    <script src="static/vendor/jquery.min.js" type="text/javascript"></script>
+    <script src="static/vendor/jquery-migrate.min.js" type="text/javascript"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <!-- PAGE LEVEL PLUGINS -->
+    <script src="static/vendor/jquery.easing.js" type="text/javascript"></script>
+    <script src="static/vendor/jquery.back-to-top.js" type="text/javascript"></script>
+    <script src="static/vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
+    <script src="static/vendor/jquery.wow.min.js" type="text/javascript"></script>
+    <script src="static/vendor/swiper/js/swiper.jquery.min.js" type="text/javascript"></script>
+    <script src="static/vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+    <script src="static/vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+
+    <!-- PAGE LEVEL SCRIPTS -->
+    <script src="static/js/layout.min.js" type="text/javascript"></script>
+    <script src="static/js/components/wow.min.js" type="text/javascript"></script>
+    <script src="static/js/components/swiper.min.js" type="text/javascript"></script>
+    <script src="static/js/components/masonry.min.js" type="text/javascript"></script>
+
+</body>
+<!-- END BODY -->
+</html>

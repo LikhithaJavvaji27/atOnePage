@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<title>C Programming</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Programming Tutorial</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="/contact">Contact us</a></li>
+        <li><a href="/courses">Courses</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/homepage">Courses</a></li>
+        {% if session.logged_in %}
+          <li><a href="/cLanguageAssessment">Take Assessment</a></li>
+          <li><a href="/logout">Logout</a></li>
+        {% else %}
+          <li><a href="/register">Register</a></li>
+          <li><a href="/login">Log in</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:10%">
+  <h3 class="w3-bar-item">Menu</h3>
+  <a href="/c" class="w3-bar-item w3-button">Introduction</a>
+  <a href="/firstprogram" class="w3-bar-item w3-button">First Program</a>
+  <a href="#" class="w3-bar-item w3-button">Strings</a>
+</div>
+
+<!-- Page Content -->
+<div style="margin-left:10%">
+
+<div class="w3-container w3-teal">
+  <h1>Top Performers</h1>
+</div>
+
+<div class="w3-container">
+   <table class= "table table-striped">
+     <tr>
+       <th>ID</th>
+       <th>Name</th>
+       <th>Score</th>
+     </tr>
+     {% for topper in toppers %}
+        <tr>
+          <td>{{topper.id}}</td>
+          <td>{{topper.name}}</td>
+          <td>{{topper.score}}</td>
+        </tr>
+
+     {% endfor %}
+   </table>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<title>C Programming</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Programming Tutorial</a>
+      </div>
+      <ul class="nav navbar-nav">
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/c">Home</a></li>
+        {% if session.logged_in %}
+          <li><a href="/cLanguageAssessment">Take Assessment</a></li>
+          <li><a href="/logout">Logout</a></li>
+        {% else %}
+          <li><a href="/register">Register</a></li>
+          <li><a href="/login">Log in</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
+
+
+    <main role="main">
+      {% include 'includes/_messages.html' %}
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+          <!-- courses -->
+          <div id="courses">
+              <div class="container">
+                  <div class="row margin-b-40">
+                      <div class="col-sm-6">
+                          <h2>Assessment</h2>
+
+                      </div>
+                  </div>
+                  <!--// end row -->
+<div class="w3-container">
+   <table class= "table table-striped">
+     <tr>
+       <th>ID</th>
+       <th>Title</th>
+       <th>Category</th>
+       <th>Level</th>
+       <th>Score</th>
+     </tr>
+     {% for problemstatement in problemstatements %}
+        <tr>
+          <td>{{problemstatement.id}}</td>
+          <td>{{problemstatement.subject}}</td>
+          <td>{{problemstatement.category}}</td>
+          <td>{{problemstatement.level}}</td>
+          <td>{{problemstatement.score}}</td>
+          <td><a href="/solvePythonproblem/{{problemstatement.id}}" class="btn btn-default pullright">Solve</a></td>
+        </tr>
+
+     {% endfor %}
+   </table>
+</div>
+</div>
+
+                  <!--// end row -->
+              </div>
+          </div>
+    </main>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

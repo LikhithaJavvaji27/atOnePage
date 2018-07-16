@@ -1,0 +1,139 @@
+<!Doctype html>
+    <html lang="en" class="no-js">
+        <!-- BEGIN HEAD -->
+        <head>
+            <meta charset="utf-8"/>
+            <title>Online programming tutorial</title>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta content="width=device-width, initial-scale=1" name="viewport"/>
+            <meta content="" name="description"/>
+            <meta content="" name="author"/>
+
+            <!-- GLOBAL MANDATORY STYLES -->
+            <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+            <link href="static/vendor/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+            <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+            <!-- PAGE LEVEL PLUGIN STYLES -->
+            <link href="static/css/animate.css" rel="stylesheet">
+            <link href="static/vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
+
+            <!-- THEME STYLES -->
+            <link href="static/css/layout1.min.css" rel="stylesheet" type="text/css"/>
+
+            <!-- Favicon -->
+            <link rel="shortcut icon" href="favicon.ico"/>
+        </head>
+        <!-- END HEAD -->
+
+        <!-- BODY -->
+        <body id="body" data-spy="scroll" data-target=".header">
+
+            <!--========== HEADER ==========-->
+            <header class="header navbar-fixed-top">
+                <!-- Navbar -->
+                <nav class="navbar" role="navigation">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="menu-container js_nav-item">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="toggle-icon"></span>
+                            </button>
+
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a class="logo-wrap" href="#body">
+                                  <img class="logo-img logo-img-main" src="static/img/logo-dark.png" alt="Asentus Logo">
+
+                    </a>
+                            </div>
+                            <!-- End Logo -->
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse nav-collapse">
+                            <div class="menu-container">
+                                <ul class="nav navbar-nav navbar-nav-right">
+                                    <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="/homepage">Home</a></li>
+                                    <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="/dashboard">Dashboard</a></li>
+                                    <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="/">Logout</a></li>
+                                   </ul>
+                            </div>
+                        </div>
+                        <!-- End Navbar Collapse -->
+                    </div>
+                </nav>
+                <!-- Navbar -->
+
+    <main role="main">
+      {% include 'includes/_messages.html' %}
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="container">
+          <h2 align = "center" class="display-3"><i> Welcome {{session.name}} </i></h2>
+        </div>
+          <!-- courses -->
+          <div id="courses">
+              <div class="container">
+                  <div class="row margin-b-40">
+                      <div class="col-sm-6">
+                          <h2>Courses </h2>
+                          <p>Our website offers various courses like...</p>
+                      </div>
+                  </div>
+                  <!--// end row -->
+
+                  <div class="row">
+                      <!-- Latest Products -->
+                      <div class="col-sm-4 sm-margin-b-30">
+                          <div class="margin-b-10">
+                          <a href = "/c"><img class="img-responsive" src="static/img/397x300/04.png" alt="C Image"></a>
+                          </div>
+                          <h4>C Language</a> <span class="text-uppercase margin-l-20"></span></h4>
+                          <p>C is a procedural programming language. It was mainly
+                developed as a system programming language to write operating
+                system.</p>
+                          <a class="link" href="/c">Get Started</a>
+                      </div>
+                      <!-- End Latest Products -->
+
+                      <!-- Latest Products -->
+                      <div class="col-sm-4 sm-margin-b-30"><br><br>
+                          <div class="margin-b-10">
+                          <a href = "/python"> <img class="img-responsive" src="static/img/397x300/05.jpg" alt="Python Image">
+                          </div><br><br>
+                          <h4>Python</a> <span class="text-uppercase margin-l-20"></span></h4>
+                          <p>Python is a powerful high-level, object-oriented
+                programming language. It has simple easy-to-use syntax making it
+                the perfect language.</p>
+                          <a class="link" href="/python">Get Started</a>
+                      </div>
+                      <!-- End Latest Products -->
+
+          <!-- Latest Products -->
+                      <div class="col-sm-4 sm-margin-b-30">
+                          <div class="margin-b-10">
+                              <img class="img-responsive" src="static/img/397x300/06.png" alt="HTML Image">
+                          </div>
+                          <h4>HTML</a> <span class="text-uppercase margin-l-20"></span></h4>
+                          <p>Learn front end development with html and start developing web pages</p>
+                          <a class="link" href="/c">Get Started</a>
+                      </div>
+                      <!-- End Latest Products -->
+
+                  </div>
+                  <!--// end row -->
+              </div>
+          </div>
+    </main>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

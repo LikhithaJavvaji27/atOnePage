@@ -1,334 +1,624 @@
 <!DOCTYPE html>
 
 <html lang="en" class="no-js">
-    <!-- BEGIN HEAD -->
-    <head>
-        <meta charset="utf-8"/>
-        <title>Online programming tutorial</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta content="width=device-width, initial-scale=1" name="viewport"/>
-        <meta content="" name="description"/>
-        <meta content="" name="author"/>
+<!-- BEGIN HEAD -->
+<head>
+<meta charset="utf-8" />
+<title>Online programming tutorial</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<meta content="" name="description" />
+<meta content="" name="author" />
 
-        <!-- GLOBAL MANDATORY STYLES -->
-        <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
-        <link href="static/vendor/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
-        <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<!-- GLOBAL MANDATORY STYLES -->
+<link
+	href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700"
+	rel="stylesheet" type="text/css">
+<link href="static/vendor/simple-line-icons/simple-line-icons.min.css"
+	rel="stylesheet" type="text/css" />
+<link href="static/vendor/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet" type="text/css" />
 
-        <!-- PAGE LEVEL PLUGIN STYLES -->
-        <link href="static/css/animate.css" rel="stylesheet">
-        <link href="static/vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
+<!-- PAGE LEVEL PLUGIN STYLES -->
+<link href="static/css/animate.css" rel="stylesheet">
+<link href="static/vendor/swiper/css/swiper.min.css" rel="stylesheet"
+	type="text/css" />
 
-        <!-- THEME STYLES -->
-        <link href="static/css/layout1.min.css" rel="stylesheet" type="text/css"/>
+<!-- THEME STYLES -->
+<link href="static/css/layout1.min.css" rel="stylesheet" type="text/css" />
 
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="favicon.ico"/>
-        <!-- END HEAD -->
-	  <style>
-    a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 16px;
+<!-- Favicon -->
+<link rel="shortcut icon" href="favicon.ico" />
+<!-- END HEAD -->
+<style>
+a {
+	text-decoration: none;
+	display: inline-block;
+	padding: 8px 16px;
 }
 
 a:hover {
-    background-color: #ddd;
-    color: black;
+	background-color: #ddd;
+	color: black;
 }
 
 .previous {
-   border-radius: 8px;
+	border-radius: 8px;
 	margin: 24px 250px;
-	padding : 12px 34px;
-    font-size : 18px;
-    background-color: #33adff;
-    color: black;
+	padding: 12px 34px;
+	font-size: 18px;
+	background-color: #33adff;
+	color: black;
 }
+
 .previous1 {
-   border-radius: 8px;
+	border-radius: 8px;
 	margin: 24px -30px;
-	padding : 12px 34px;
-    font-size : 18px;
-    background-color: #ff6699;
-    color: black;
+	padding: 12px 34px;
+	font-size: 18px;
+	background-color: #ff6699;
+	color: black;
 }
+
 .example {
-    margin-left: 110px;
-    padding:20px;
-    width : 1050px;
-  background-color: #f2f2f2;
-  background-style:ridge;
-  color: black;
+	margin-left: 140px;
+	padding: 20px;
+	width: 1050px;
+	background-color: #f2f2f2;
+	border-style: ridge;
+	color: black;
 }
 
 .next {
-   border-radius: 8px;
-  margin: 24px 180px;
-	padding : 12px 34px;
-    font-size : 20px;
-    background-color: #4dff4d;
-    color: black;
+	border-radius: 8px;
+	margin: 24px 180px;
+	padding: 12px 34px;
+	font-size: 20px;
+	background-color: #4dff4d;
+	color: black;
 }
 
-	  .main {
-            margin-left: 120px;
-            font-size:20px;
-            color : #000000; /* Same as the width of the sidenav */
-        }
-        .main1 {
-                margin-left: 120px;
-                font-size:20px;
-                color : #000000; /* Same as the width of the sidenav */
-            }
-#sidenav h2 {
-font-size:21px;
-padding-left:16px;
-margin:-4px 0 4px 0;
-width:204px;
+.main1 {
+	margin-left: 50px;
+	font-size: 20px;
+	color: #000000; /* Same as the width of the sidenav */
 }
-#sidenav a {font-family:"Segoe UI",Arial,sans-serif;text-decoration:none;display:block;padding:2px 1px 1px 16px}
-#sidenav a:hover,#sidenav a:focus {color:#000000;background-color:#4d94ff;}
-#sidenav a.active {background-color:#66ff66;color:black}
+
+.main {
+	margin-left: 120px;
+	font-size: 20px;
+	padding-top: 20px;
+	color: #000000; /* Same as the width of the sidenav */
+}
+
+#sidenav h2 {
+	font-size: 21px;
+	padding-left: 16px;
+	margin: -4px 0 4px 0;
+	width: 204px;
+}
+
+#sidenav a {
+	font-family: "Segoe UI", Arial, sans-serif;
+	text-decoration: none;
+	display: block;
+	padding: 2px 1px 1px 16px
+}
+
+#sidenav a:hover, #sidenav a:focus {
+	color: #000000;
+	background-color: #4d94ff;
+}
+
+#sidenav a.active {
+	background-color: #66ff66;
+	color: black
+}
 
 #leftmenuinner {
-position:fixed;
-top:0;
-padding-top:95px;
-padding-bottom:0;
-height:100%;
-width:220px;
-background-color:transparent;
-}
-#leftmenuinnerinner {
-height:100%;
-width:100%;
-overflow-y:scroll;
-overflow-x:hidden;
-padding-top:20px;
+	position: fixed;
+	top: 0;
+	padding-top: 95px;
+	padding-bottom: 0;
+	height: 100%;
+	width: 220px;
+	background-color: transparent;
 }
 
-#leftmenuinnerinner {overflow-y:scroll}
-.bottomad {float:none;text-align:center}
-#skyscraper {min-height:60px}
+#leftmenuinnerinner {
+	height: 100%;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
+
+#leftmenuinnerinner {
+	overflow-y: scroll
+}
+
+.bottomad {
+	float: none;
+	text-align: center
+}
+
+#skyscraper {
+	min-height: 60px
+}
+
 }
 .p {
-  text-color: #ff0000;
+	text-color: #ff0000;
 }
+
 table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
+	border: 1px solid black;
+	border-collapse: collapse;
 }
+
 th, td {
-    padding: 5px;
-    text-align: left;
+	padding: 5px;
+	text-align: left;
 }
+
 p.ex1 {
-    margin-right:50px;
+	margin-right: 50px;
 }
 </style>
-  </head>
-    <!-- END HEAD -->
-    <!-- BODY -->
-    <body id="body" data-spy="scroll" data-target=".header">
-        <!--========== HEADER ==========-->
-        <header class="header navbar-fixed-top">
-            <!-- Navbar -->
-            <nav class="navbar" role="navigation">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="menu-container js_nav-item">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="toggle-icon"></span>
-                        </button>
+</head>
+<!-- END HEAD -->
+<!-- BODY -->
+<body id="body" data-spy="scroll" data-target=".header">
+	<!--========== HEADER ==========-->
+	<header class="header navbar-fixed-top">
+		<!-- Navbar -->
+		<nav class="navbar" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="menu-container js_nav-item">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target=".nav-collapse">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="toggle-icon"></span>
+					</button>
 
-                        <!-- Logo -->
-                        <div class="logo">
-                            <a class="logo-wrap" href="#body">
-                                <img class="logo-img logo-img-main-active" src="static/img/logo-dark.png" alt="Asentus Logo">
-                            </a>
-                        </div>
-                        <!-- End Logo -->
-                    </div>
+					<!-- Logo -->
+					<div class="logo">
+						<a class="logo-wrap" href="#body"> <img
+							class="logo-img logo-img-main-active"
+							src="static/img/logo-dark.png" alt="Asentus Logo">
+						</a>
+					</div>
+					<!-- End Logo -->
+				</div>
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse nav-collapse">
-                        <div class="main-container">
-                            <ul class="nav navbar-nav navbar-nav-right">
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="/homepage">Home</a></li>
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="/">Logout</a></li>
-                                </ul>
-                        </div>
-                    </div>
-                    <!-- End Navbar Collapse -->
-                </div>
-            </nav>
-            <!-- Navbar -->
-        </header>
-        <!--========== END HEADER ==========-->
-        <br><BR><BR><BR><BR>
-<body style="width:95%">
-<div class = "main">
-  <h1 align = "center" style="color:#33adff;">Variables</h1>
-  <p class = "main">Variables are memory locations(storage area) in C programming language.
-  <br>
-  <p class = "main">The primary purpose of variables is to store data in memory for later use. Unlike constants which do not change during the program execution, variables value may change during execution. If you declare a variable in C, that means you are asking to the operating system for reserve a piece of memory with that variable name.
-  <br>
-  <p class = "main" style="font-size:30px">Variable Definition in C
-  <p class = "main">Syntax
-  <p class = "example"> <br> type variable_name;<br>
-  <p class = "main">or
-  <p class = "example"><br>type variable_name, variable_name, variable_name;<br>
-  <br>
-  <p class = "main" style="font-size:30px">Variable Definition and Initialization
-  <p class = "main">Example
-  <p class = "example"><br>
-    int    width, height=5;
-    <br>
-  char   letter='A';
-  <br>
-  float  age, area;
-  <br>
-  double d;
-  <br>
-  /* actual initialization */width = 10;
-  <br>
-  age = 26.5;
-  <br>
-  <p class = "main" style="font-size:30px">Variable Assignment
-  <p class = "main">Variable assignment is a process of assigning a value to a variable.
-  <p class = "main">Example
-  <p class = "example"><br>int width = 60;
-    <br>
-    int age = 31;
-    <br>
-  <p class = "main" style="font-size:30px">There are some rules on choosing variable names
-    <ul><ul><ul><ul>
-      <li style="font-size:20px">A variable name can consist of Capital letters A-Z, lowercase letters a-z, digits 0-9, and the underscore character.</li>
-      <li style="font-size:20px">The first character must be a letter or underscore.</li>
-      <li style="font-size:20px">Blank spaces cannot be used in variable names.</li>
-      <li style="font-size:20px">Special characters like #, $ are not allowed.</li>
-      <li style="font-size:20px">C keywords cannot be used as variable names.</li>
-       <li style="font-size:20px">Variable names are case sensitive.</li>
-       <li style="font-size:20px">Values of the variables can be numeric or alphabetic.</li>
-        <li style="font-size:20px">Variable type can be char, int, float, double or void.</li>
-      </ul></ul></ul></ul>
-        <p class = "main" style="font-size:30px">C Program to Print Value of a variable
-        <p class = "main">Example
-        <p class = "example"><br>
-        #include< stdio.h >
-        <br>
-        void main()
-        <br>
-        {
-         <br>
-        int age = 33;
-        <br>
-       printf("I am %d years old.\n", age);
-       <br>
-      }
-      <br>
-      <p class = "main">Program Output:
-      <p class = "example">I am 33 years old.
-      <br>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse nav-collapse">
+					<div class="main-container">
+						<ul class="nav navbar-nav navbar-nav-right">
+							<li class="js_nav-item nav-item"><a
+								class="nav-item-child nav-item-hover" href="/homepage">Home</a></li>
+							<li class="js_nav-item nav-item"><a
+								class="nav-item-child nav-item-hover" href="/">Logout</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- End Navbar Collapse -->
+			</div>
+		</nav>
+		<!-- Navbar -->
+	</header>
+	<!--========== END HEADER ==========-->
+	<br>
+	<BR>
+	<BR>
+	<BR>
+	<BR>
+<body style="width: 95%">
+
+	<div class="main">
+		<h1 align="center" style="color: #33adff;">PYTHON VARIABLES,
+			CONSTANTS and LITERALS</h1>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>☛ VARIABLE
+					</ul>
+		</h3>
+		<p class="main">
+			In most of the programming languages a variable is a named location
+			used to store data in the memory. Each variable must have a unique
+			name called identifier. It is helpful to think of variables as
+			container that hold data which can be changed later throughout
+			programming. <BR> Non technically, you can suppose variable as a
+			bag to store books in it and those books can be replaced at anytime.
+			<br> Note: In Python we don't assign values to the variables,
+			whereas Python gives the reference of the object (value) to the
+			variable.
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						<ul>Declaring Variables in Python
+						</ul>
+		</h3>
+		<p class="main">In Python, variables do not need declaration to
+			reserve memory space. The "variable declaration" or "variable
+			initialization" happens automatically when we assign a value to a
+			variable.
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						<ul>Assigning value to a Variable in Python
+						</ul>
+		</h3>
+		<p class="main">
+			You can use the assignment operator = to assign the value to a
+			variable.<br> The operand to the left of the = operator is the
+			name of the variable and the operand to the right of the = operator
+			is the value stored in the variable.
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						<ul>Example 1: Declaring and assigning a value to a variable
+						</ul>
+		</h3>
+		<p class="example" style="font-size: 17px">
+			first = "Hello"<br> print(first)<br>
+		<p class="main">When you run the program, the output will be:
+		<p class="example" style="font-size: 17px">
+			Hello<br>
+		<p class="main">
+			In the above program, we assigned a value Hello to the variable
+			first. Then we print the value assigned to first i.e Hello. <br>
+			Note : Python is a type inferred language, it can automatically infer
+			(know) Hello is a String and declare first a String.
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						<ul>Example 2 : Changing value of a variable
+						</ul>
+		</h3>
+		<p class="example" style="font-size: 17px">
+			first = "Hello"<br> first = "World"<br> print(first)
+		<p class="main">When you run the program, the output will be:
+		<p class="example" style="font-size: 17px">
+			World<br>
+		<p class="main">In the above program, we assigned new value World
+			to first Now, the new value World will replace the old value Hello.
+			For the confirmation, we print website and it will display new value
+			World.
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						<ul>Example 3: Assigning multiple values to multiple
+							variables
+						</ul>
+		</h3>
+		<p class="example" style="font-size: 17px">
+			a, b, c = 5, 3.2, "Hello"<br> print (a)<br> print (b)<br>
+			print (c)<br>
+		<p class="main">When you run the program, the output will be:
+		<p class="example" style="font-size: 17px">
+			5<br>3.2<br>Hello<br>
+		<p class="main">If we want to assign the same value to multiple
+			variables at once, we can do this as
+		<p class="example" style="font-size: 17px">
+			x = y = z = "same" <br> print (x)<br> print (y)<br>
+			print (z)<br>
+		<p class="main">When you run the program, the output will be:
+		<p class="example" style="font-size: 17px">
+			same<br>same<br>same
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>☛ CONSTANTS
+					</ul>
+		</h3>
+		<p class="main">
+
+			A constant is a type of variable whose value cannot be changed. It is
+			helpful to think of constants as containers that hold information
+			which cannot be changed later. <br> Non technically, you can
+			think of constant as a bag to store some books and those books cannot
+			be replaced once placed inside the bag.
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						<ul>Assigning value to a constant in Python
+						</ul>
+		</h3>
+		<p class="main">In Python, constants are usually declared and
+			assigned on a module. Here, the module means a new file containing
+			variables, functions etc which is imported to main file. Inside the
+			module, constants are written in all capital letters and underscores
+			separating the words.
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						<ul>Example 4: Declaring and assigning value to a constant
+						</ul>
+		</h3>
+		<p class="example" style="font-size: 17px">
+			PI = 3.14<br> GRAVITY = 9.8<br> print(PI)<br>
+			print(GRAVITY)
+		<p class="main">When you run the program, the output will be:
+		<p class="example" style="font-size: 17px">
+			3.14<br>9.8<br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>☛ LITERALS
+					</ul>
+		</h3>
+		<p class="main">Literal is a raw data given in a variable or
+			constant. In Python, there are various types of literals they are as
+			follows:
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						<ul>Numeric Literals
+						</ul>
+		</h3>
+		<p class="main">Numeric Literals are immutable (unchangeable).
+			Numeric literals can belong to 3 different numerical types Integer,
+			Float and Complex.
+		<p class="example" style="font-size: 17px">
+			a = 0b1010 #Binary Literals<br> b = 100 #Decimal Literal <br>
+			c = 0o310 #Octal Literal<br> d = 0x12c #Hexadecimal Literal<br>
+			<br> #Float Literal.<br> float_1 = 10.5 <br> float_2 =
+			1.5e2<br> <br> #Complex Literal <br> x = 3.14j<br>
+			<br> print(a, b, c, d)<br> print(float_1, float_2)<br>
+			print(x, x.imag, x.real)<br>
+		<p class="main">When you run the program, the output will be:
+		<p class="example" style="font-size: 17px">
+			10 100 200 300<br> 10.5 150.0<br> 3.14j 3.14 0.0<br>
+		<p class="main">In the above program,
+		<ul>
+			<ul>
+				<ul>
+					<ul>
+						<li style="font-size: 20px">We assigned integer literals into
+							different variables. Here, a is binary literal, b is a decimal
+							literal, c is an octal literal and d is a hexadecimal literal.</li>
+						<li style="font-size: 20px">When we print the variables, all
+							the literals are converted into decimal values.</li>
+						<li style="font-size: 20px">10.5 and 1.5e2 are floating point
+							literals. 1.5e2 is expressed with exponential and is equivalent
+							to 1.5 * 102.</li>
+						<li style="font-size: 20px">We assigned a complex literal i.e
+							3.14j in variable x. Then we use imaginary literal (x.imag) and
+							real literal (x.real) to create imaginary and real part of
+							complex number.</li>
+					</ul>
+				</ul>
+			</ul>
+		</ul>
+		</ul>
+		</ul>
+		</ul>
+		</ul>
+
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						<ul>String literals
+						</ul>
+		</h3>
+		<p class="main">A string literal is a sequence of characters
+			surrounded by quotes. We can use both single, double or triple quotes
+			for a string. And, a character literal is a single character
+			surrounded by single or double quotes.
+		<p class="example" style="font-size: 17px">
+			strings = "This is Python"<br> char = "C"<br> multiline_str
+			= """This is a multiline string with more than one line code."""<br>
+			unicode = u"\u00dcnic\u00f6de"<br> raw_str = r"raw \n string"<br>
+			<br> print(strings)<br> print(char)<br>
+			print(multiline_str)<br> print(unicode)<br> print(raw_str)<br>
+		<p class="main">When you run the program, the output will be:
+		<p class="example" style="font-size: 17px">
+			This is Python<br> C<br> This is a multiline string with
+			more than one line code.<br> Ünicöde<br> raw \n string<br>
+		<p class="main">In the above program, This is Python is a string
+			literal and C is a character literal. The value with triple-quote """
+			assigned in the multiline_str is multi-line string literal. The
+			u"\u00dcnic\u00f6de" is a unicode literal which supports characters
+			other than English and r"raw \n string" is a raw string literal.
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						<ul>Boolean literals
+						</ul>
+		</h3>
+		<p class="main">A Boolean literal can have any of the two values:
+			True or False.
+		<p class="example" style="font-size: 17px">
+			x = (1 == True)<br> y = (1 == False)<br> a = True + 4<br>
+			b = False + 10<br> <br> print("x is", x)<br> print("y
+			is", y)<br> print("a:", a)<br> print("b:", b)<br>
+		<p class="main">When you run the program, the output will be:
+		<p class="example" style="font-size: 17px">
+			x is True<br> y is False<br> a: 5<br> b: 10<br>
+		<p class="main">
+			In the above program, we use boolean literal True and False. In
+			Python, True represents the value as 1 and False as 0. The value of x
+			is True because 1 is equal to True. And, the value of y is False
+			because 1 is not equal to False. <br> Similarly, we can use the
+			True and False in numeric expressions as the value. The value of a is
+			5 because we add True which has value of 1 with 4. Similarly, b is 10
+			because we add the False having value of 0 with 10.
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						<ul>Special literals
+						</ul>
+		</h3>
+		<p class="main">Python contains one special literal i.e. None. We
+			use it to specify to that field that is not created.
+		<p class="example" style="font-size: 17px">
+			drink = "Available"<br> food = None<br> <br> def
+			menu(x):<br> if x == drink:<br> print(drink)<br> else:<br>
+			print(food)<br> <br> menu(drink)<br> menu(food)<br>
+		<p class="main">When you run the program, the output will be:
+		<p class="example" style="font-size: 17px">
+			Available<br> None<br>
+		<p class="main">In the above program, we define a menu function.
+			Inside menu, when we set parameter as drink then, it displays
+			Available. And, when the parameter is food, it displays None.
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						<ul>Literal Collections
+						</ul>
+		</h3>
+		<p class="main">There are four different literal collections List
+			literals, Tuple literals, Dict literals, and Set literals.
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						<ul>Example: How to use literals collections in Python?
+						</ul>
+		</h3>
+		<p class="example" style="font-size: 17px">
+			fruits = ["apple", "mango", "orange"] #list<br> numbers = (1, 2,
+			3) #tuple<br> alphabets = {'a':'apple', 'b':'ball', 'c':'cat'}
+			#dictionary<br> vowels = {'a', 'e', 'i' , 'o', 'u'} #set<br>
+			<br> print(fruits)<br> print(numbers)<br>
+			print(alphabets)<br> print(vowels)<br>
+		<p class="main">When you run the program, the output will be:
+		<p class="example" style="font-size: 17px">
+			['apple', 'mango', 'orange']<br> (1, 2, 3)<br> {'a':
+			'apple', 'b': 'ball', 'c': 'cat'}<br> {'e', 'a', 'o', 'i', 'u'}
+
+		<p class="main">In the above program, we created a list of fruits,
+			tuple of numbers, dictionary dict having values with keys desginated
+			to each value and set of vowels.
+	</div>
+	<a href="/syntax" class="previous">&laquo; Previous</a>
+	<a href="#" class="previous1">Take Assessment</a>
+	<a href="/dataTypes" class="next">Next &raquo;</a>
 
 
-  </div><a href="/datatypes" class="previous">&laquo; Previous</a>
-        <a href="#" class="previous1">Take Assessment</a>
-  <a href="/storageclasses" class="next">Next &raquo;</a>
+	<div class='w3-sidebar w3-collapse' id='sidenav'>
+		<div id='leftmenuinner'>
+			<div class='w3-light-grey' id='leftmenuinnerinner'>
+				<h2 align="center">PYTHON</h2>
+				<p>
+				<p class="main1">
+					Introduction<br>
+				<p>
+					<a target="_top" href="/python">Getting Started</a> <a
+						target="_top" href="/silent">Silent features</a> <a target="_top"
+						href="/domain">Domain</a> <a target="_top" href="/syntax">Basic
+						syntax</a> <a target="_top" a class="active" href="/variables">Variables</a>
+					<a target="_top" href="/dataTypes">Data Types</a> <a target="_top"
+						href="/typeConversion">Type Conversion</a> <a target="_top"
+						href="/input">I/O and Import</a> <a target="_top"
+						href="/operators">Operators</a> <a target="_top" href="/nameSpace">Name
+						Space</a>
+				<p class="main1">
+					Flow Control<br>
+				<p>
+					<a target="_top" href="/ifelse">if...else</a> <a target="_top"
+						href="/forLoop">For Loop</a> <a target="_top" href="/while1">While
+						Loop</a> <a target="_top" href="/breakContinue">Break and continue</a>
+					<a target="_top" href="/pass1">Pass</a>
+				<p class="main1">
+					Functions<br>
+				<p>
+					<a target="_top" href="/function">Function</a> <a target="_top"
+						href="/argument">Argument</a> <a target="_top" href="/recursion">Recursion</a>
+					<a target="_top" href="/anonymous">Anonymous Function</a> <a
+						target="_top" href="/globalLocal">Global, Local and Nonlocal</a> <a
+						target="_top" href="/global1">Global Keyword</a> <a target="_top"
+						href="/modules">Modules</a> <a target="_top" href="/package">Package</a>
+				<p class="main1">
+					Datatypes<br>
+				<p>
+					<a target="_top" href="/number">Number</a> <a target="_top"
+						href="/list">List</a> <a target="_top" href="/tuple">Tuple</a> <a
+						target="_top" href="/string">String</a> <a target="_top"
+						href="/set">Set</a> <a target="_top" href="/dictionary">Dictionary</a>
+					<a target="_top" href="/nested">Nested Dictionary</a> <a
+						target="_top" href="/arrays">Arrays</a> <a target="_top"
+						href="/matrix">Matrix</a> <a target="_top" href="/listCompre">List
+						Comprehension</a>
+				<p class="main1">
+					Python Files<br>
+				<p>
+					<a target="_top" href="/fileOperation">File Operation</a> <a
+						target="_top" href="/directory">Directory</a> <a target="_top"
+						href="/exception">Exception</a> <a target="_top"
+						href="/exceptionHand">Exception Handling</a> <a target="_top"
+						href="/userDefined">User-defined Exception</a>
+				<p class="main1">
+					Object Class<br>
+				<p>
+					<a target="_top" href="/oop">Python OOP</a> <a target="_top"
+						href="/class1">Class</a> <a target="_top" href="/inheritance">Inheritance</a>
+					<a target="_top" href="/multipleInterit">Multiple Inheritance</a> <a
+						target="_top" href="/overloading">Operator Overloading</a> <br>
+				</p>
+				<!-- Back To Top -->
+				<a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
 
+				<!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+				<!-- CORE PLUGINS -->
+				<script src="static/vendor/jquery.min.js" type="text/javascript"></script>
+				<script src="static/vendor/jquery-migrate.min.js"
+					type="text/javascript"></script>
+				<script src="static/vendor/bootstrap/js/bootstrap.min.js"
+					type="text/javascript"></script>
 
-        <div class='w3-sidebar w3-collapse' id='sidenav'>
-            <div id='leftmenuinner'>
-            <div class='w3-light-grey' id='leftmenuinnerinner'>
-            <h2 align = "center">C</h2><p>
-            <a target="_top" href="/c">Introduction</a>
-            <a target="_top" href="/programstructure">ProgramStructure</a>
-            <a target="_top" href="/io">Input And Output</a>
-            <a target="_top" href="/format">Format Specifiers</a>
-            <p class = "main1">Declaration&Assignments<br><p>
-            <a target="_top" href="/tokens">Tokens</a>
-            <a target="_top" href="/identifiers">Identifiers</a>
-            <a target="_top" href="/keywords">keywords</a>
-            <a target="_top"  href="/constants">Constants</a>
-            <a target="_top" href="/operators">Operators</a>
-            <a target="_top"  href="/datatypes">Datatypes</a>
-            <a target="_top"  a class="active" href="/variables">variables</a>
-            <a target="_top" href="/storage">Storage Classes</a>
-            <a target="_top" href="/pre">Preprocessors</a>
-            <a target="_top" href="/header1">HeaderFiles</a>
-            <a target="_top" href="/typecaste">Typecasting</a>
-            <a target="_top" href="/decision">Decision making</a>
+				<!-- PAGE LEVEL PLUGINS -->
+				<script src="static/vendor/jquery.easing.js" type="text/javascript"></script>
+				<script src="static/vendor/jquery.back-to-top.js"
+					type="text/javascript"></script>
+				<script src="static/vendor/jquery.smooth-scroll.js"
+					type="text/javascript"></script>
+				<script src="static/vendor/jquery.wow.min.js" type="text/javascript"></script>
+				<script src="static/vendor/swiper/js/swiper.jquery.min.js"
+					type="text/javascript"></script>
+				<script src="static/vendor/masonry/jquery.masonry.pkgd.min.js"
+					type="text/javascript"></script>
+				<script src="static/vendor/masonry/imagesloaded.pkgd.min.js"
+					type="text/javascript"></script>
 
-            <a target="_top" href="/ifstatements">If Statements</a>
-            <a target="_top" href="/ifelsestatements">If-Else Statements</a>
-            <a target="_top" href="/nested">Nested if-else Statements</a>
-            <a target="_top" href="/elseif">ELse-if Statements</a>
-              <a target="_top" href="/switch">Switch Statements</a>
-                <a target="_top" href="/loops">C Loops</a>
-                <a target="_top" href="/functions">C Functions</a>
-                <a target="_top" href="/arrays">C Arrays</a>
-                <a target="_top" href="/strings">C Strings</a>
-                <a target="_top" href="/pointers">C Pointers</a>
-                <a target="_top" href="/structures">C Structures</a>
-                <a target="_top" href="/unions">C Unions</a>
-                <a target="_top" href="/files">C Files</a>
-            <a target="_top" href="howto_js_topnav.asp">Top Navigation</a>
-            <a target="_top" href="howto_js_topnav_responsive.asp">Responsive Topnav</a>
-            <a target="_top" href="howto_css_searchbar.asp">Search Bar</a>
-            <a target="_top" href="howto_css_fixed_sidebar.asp">Fixed Sidebar</a>
-            <a target="_top" href="howto_js_sidenav.asp">Side Navigation</a>
-            <a target="_top" href="howto_js_fullscreen_overlay.asp">Fullscreen Navigation</a>
-            <a target="_top" href="howto_js_off-canvas.asp">Off-Canvas Menu</a>
-            <a target="_top" href="howto_css_sidenav_buttons.asp">Hover Sidenav Buttons</a>
-            <a target="_top" href="howto_css_menu_horizontal_scroll.asp">Horizontal Scroll Menu</a>
-            <a target="_top" href="howto_cp">Vertical Menu</a>
-            <a target="_top" href="howto_css_bottom_nav.asp">Bottom Navigation</a>
-            <a target="_top" href="howto_js_bottom_nav_responsive.asp">Responsive Bottom Nav</a>
-            <a target="_top" href="howto_css_navbar_border.asp">Bottom Border Nav Links</a>
-            <a target="_top" href="howto_css_topnav_right.asp">Right Aligned Menu Links</a>
-            <a target="_top" href="howto_css_fixed_menu.asp">Fixed Menu</a>
-            <a target="_top" href="howto_js_navbar_slide.asp">Slide Down Bar on Scroll</a>
-            <a target="_top" href="howto_js_navbar_sticky.asp">Sticky Navbar</a>
-            <a target="_top" href="howto_css_dropdown.asp">Hover Dropdowns</a>
-            <a target="_top" href="howto_js_dropdown.asp">Click Dropdowns</a>
-            <a target="_top" href="howto_css_dropdown_navbar.asp">Dropdown in Topnav</a>
-            <a target="_top" href="howto_js_dropdown_sidenav.asp">Dropdown in Sidenav</a>
-            <a target="_top" href="howto_js_responsive_navbar_dropdown.asp">Resp Navbar Dropdown</a>
-            <a target="_top" href="howto_css_dropup.asp">Dropup</a>
-            <a target="_top" href="howto_css_mega_menu.asp">Mega Menu</a>
-            <a target="_top" href="howto_css_pagination.asp">Pagination</a>
-            <a target="_top" href="howto_css_breadcrumbs.asp">Breadcrumbs</a>
-            <a target="_top" href="howto_css_button_group.asp">Button Group</a>
-            <a target="_top" href="howto_css_button_group_vertical.asp">Vertical Button Group</a>
-            <a target="_top" href="howto_css_responsive_header.asp">Responsive Header</a>
-            <br>
-          </p>
-      <!-- Back To Top -->
-      <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
-
-      <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
-      <!-- CORE PLUGINS -->
-      <script src="static/vendor/jquery.min.js" type="text/javascript"></script>
-      <script src="static/vendor/jquery-migrate.min.js" type="text/javascript"></script>
-      <script src="static/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-
-      <!-- PAGE LEVEL PLUGINS -->
-      <script src="static/vendor/jquery.easing.js" type="text/javascript"></script>
-      <script src="static/vendor/jquery.back-to-top.js" type="text/javascript"></script>
-      <script src="static/vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
-      <script src="static/vendor/jquery.wow.min.js" type="text/javascript"></script>
-      <script src="static/vendor/swiper/js/swiper.jquery.min.js" type="text/javascript"></script>
-      <script src="static/vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
-      <script src="static/vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
-
-      <!-- PAGE LEVEL SCRIPTS -->
-      <script src="static/js/layout.min.js" type="text/javascript"></script>
-      <script src="static/js/components/wow.min.js" type="text/javascript"></script>
-      <script src="static/js/components/swiper.min.js" type="text/javascript"></script>
-      <script src="static/js/components/masonry.min.js" type="text/javascript"></script>
-
-  </body>
-  <!-- END BODY -->
-  </html>
+				<!-- PAGE LEVEL SCRIPTS -->
+				<script src="static/js/layout.min.js" type="text/javascript"></script>
+				<script src="static/js/components/wow.min.js" type="text/javascript"></script>
+				<script src="static/js/components/swiper.min.js"
+					type="text/javascript"></script>
+				<script src="static/js/components/masonry.min.js"
+					type="text/javascript"></script>
+</body>
+<!-- END BODY -->
+</html>

@@ -84,6 +84,12 @@ a:hover {
 	color: #000000; /* Same as the width of the sidenav */
 }
 
+.main1 {
+	margin-left: 50px;
+	font-size: 20px;
+	color: #000000; /* Same as the width of the sidenav */
+}
+
 #sidenav h2 {
 	font-size: 21px;
 	padding-left: 16px;
@@ -156,12 +162,7 @@ th, td {
 
 p.ex1 {
 	margin-right: 50px;
-}
-
-.main1 {
-	margin-left: 50px;
-	font-size: 20px;
-	color: #000000; /* Same as the width of the sidenav */
+	padding: 20px 40px;
 }
 </style>
 </head>
@@ -216,85 +217,244 @@ p.ex1 {
 <body style="width: 95%">
 
 	<div class="main">
-		<h1 align="center" style="color: #33adff;">Python Package</h1>
-		<br>
+		<h1 align="center" style="color: #33adff;">PYTHON BASICS</h1>
+		<p class="main">
+		<h3>
+			<ul>
+				<ul>
+					<ul>☛ Hello, World Program.
+					</ul>
+		</h3>
+		<p class="main">
+			Often, a program called "Hello, World!" is used to introduce a new
+			programming language to beginners. A "Hello, World!" is a simple
+			program that outputs "Hello, World!". However, Python is one of the
+			easiest language to learn, and creating "Hello, World!" program is as
+			simple as writing<br>
+		<h3 align="center">
+			print("Hello, World!") <br> Output : Hello, World!
+		</h3>
 		<p class="main">
 		<h3 style="font-size: 25px">
 			<ul>
 				<ul>
-					<ul>What are packages?
+					<ul>☛ IDENTIFIERS
 					</ul>
 		</h3>
 		<p class="main">
-			We don't usually store all of our files in our computer in the same
-			location. We use a well-organized hierarchy of directories for easier
-			access. <br>
-			<br> Similar files are kept in the same directory, for example,
-			we may keep all the songs in the "music" directory. Analogous to
-			this, Python has packages for directories and modules for files. <br>
-			<br> As our application program grows larger in size with a lot
-			of modules, we place similar modules in one package and different
-			modules in different packages. This makes a project (program) easy to
-			manage and conceptually clear. <br>
-			<br> Similar, as a directory can contain sub-directories and
-			files, a Python package can have sub-packages and modules. <br>
-			<br> A directory must contain a file named __init__.py in order
-			for Python to consider it as a package. This file can be left empty
-			but we generally place the initialization code for that package in
-			this file. <br>
-			<br> Here is an example. Suppose we are developing a game, one
-			possible organization of packages and modules could be as shown in
-			the figure below.<br>
-		<p align="center" class="main">
-			<img class="img-responsive" src="static/img/970x647/19.jpg"
-				alt="Python Image">
+		<ul>
+			<ul>
+				<ul>
+					<ul>
+						<li style="font-size: 20px">A Python identifier is a name
+							used to identify a variable, function, class, module or other
+							object. An identifier starts with a letter A to Z or a to z or an
+							underscore (_) followed by zero or more letters, underscores and
+							digits (0 to 9).</li>
+						<li style="font-size: 20px">Python does not allow punctuation
+							characters such as @, $, and % within identifiers. Python is a
+							case sensitive programming language. Thus, Manpower and manpower
+							are two different identifiers in Python.</li>
+						<br>Here are naming conventions for Python identifiers −
+						<br>
+						<br>
+						<ul>
+							<ul>
+								<ul>
+									<ul>
+										<li style="font-size: 20px">Class names start with an
+											uppercase letter. All other identifiers start with a
+											lowercase letter.</li>
+										<li style="font-size: 20px">Starting an identifier with a
+											single leading underscore indicates that the identifier is
+											private.</li>
+										<li style="font-size: 20px">Starting an identifier with
+											two leading underscores indicates a strongly private
+											identifier.</li>
+										<li style="font-size: 20px">If the identifier also ends
+											with two trailing underscores, the identifier is a
+											language-defined special name.</li>
+										</h3>
+									</ul>
+								</ul>
+							</ul>
+						</ul>
+					</ul>
+				</ul>
+			</ul>
+		</ul>
 		<p class="main">
 		<h3 style="font-size: 25px">
 			<ul>
 				<ul>
-					<ul>Importing module from a package
+					<ul>☛ RESERVED WORDS
+					</ul>
+		</h3>
+		<p class="main">The following list shows the Python keywords.
+			These are reserved words and you cannot use them as constant or
+			variable or any other identifier names. All the Python keywords
+			contain lowercase letters only.
+		<table align="center" style="width: 50%">
+			<tr>
+				<td>and</td>
+				<td>not</td>
+				<td>exec</td>
+			</tr>
+			<tr>
+				<td>assert</td>
+				<td>finally</td>
+				<td>or</td>
+			</tr>
+			<tr>
+				<td>break</td>
+				<td>for</td>
+				<td>pass</td>
+			</tr>
+			<tr>
+				<td>class</td>
+				<td>from</td>
+				<td>print</td>
+			</tr>
+			<tr>
+				<td>continue</td>
+				<td>global</td>
+				<td>raise</td>
+			</tr>
+			<tr>
+				<td>def</td>
+				<td>if</td>
+				<td>return</td>
+			</tr>
+			<tr>
+				<td>del</td>
+				<td>import</td>
+				<td>try</td>
+			</tr>
+			<tr>
+				<td>elif</td>
+				<td>in</td>
+				<td>while</td>
+			</tr>
+			<tr>
+				<td>else</td>
+				<td>with</td>
+				<td>is</td>
+			</tr>
+			<tr>
+				<td>except</td>
+				<td>lambda</td>
+				<td>yield</td>
+			</tr>
+		</table>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>☛ LINES AND INDENTATION
 					</ul>
 		</h3>
 		<p class="main">
-		<p class="main">
-			We can import modules from packages using the dot (.) operator. <br>
-			For example, if want to import the start module in the above example,
-			it is done as follows. <br>
+			Python provides no braces to indicate blocks of code for class and
+			function definitions or flow control. Blocks of code are denoted by
+			line indentation, which is rigidly enforced. <BR>The number of
+			spaces in the indentation is variable, but all statements within the
+			block must be indented the same amount. For example −
 		<p class="example" style="font-size: 17px">
-			import Game.Level.start<br>
+			if True:<br> print "True"<br> else:<br> print "False"<br>
 		<p class="main">
-			Now if this module contains a function named select_difficulty(), we
-			must use the full name to reference it.<br>
+			However, the following block generates an error −<br>
 		<p class="example" style="font-size: 17px">
-			Game.Level.start.select_difficulty(2)<br>
+			if True:<br> print "Answer"<br> print "True"<br> else:<br>
+			print "Answer"<br> print "False"<br>
+		<p class="main">Thus, in Python all the continuous lines indented
+			with same number of spaces would form a block.
 		<p class="main">
-			If this construct seems lengthy, we can import the module without the
-			package prefix as follows. <br>
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>☛ MULTI-LINE STATEMENT
+					</ul>
+		</h3>
+		<p class="main">Statements in Python typically end with a new
+			line. Python does, however, allow the use of the line continuation
+			character (\) to denote that the line should continue. For example −
+
 		<p class="example" style="font-size: 17px">
-			from Game.Level import start<br>
-		<p class="main">
-			We can now call the function simply as follows. <br>
+			a = 1 + 2 + 3 + \<br> 4 + 5 + 6 + \<br> 7 + 8 + 9<br>
+		<p class="main">This is explicit line continuation. In Python,
+			line continuation is implied inside parentheses ( ), brackets [ ] and
+			braces { }. For instance, we can implement the above multi-line
+			statement as
 		<p class="example" style="font-size: 17px">
-			start.select_difficulty(2)<br>
-		<p class="main">
-			Yet another way of importing just the required function (or class or
-			variable) form a module within a package would be as follows.<br>
+			a = (1 + 2 + 3 + <br> 4 + 5 + 6 + <br> 7 + 8 + 9)<br>
+		<p class="main">Here, the surrounding parentheses ( ) do the line
+			continuation implicitly. Same is the case with [ ] and { }. For
+			example:
 		<p class="example" style="font-size: 17px">
-			from Game.Level.start import select_difficulty<br>
+			a = [1 + 2 + 3 + <br> 4 + 5 + 6 + <br> 7 + 8 + 9]<br>
+		<p class="main">We could also put multiple statements in a single
+			line using semicolons, as follows
+		<p class="example" style="font-size: 17px">a = 1; b = 2; c = 3
 		<p class="main">
-			Now we can directly call this function.<br>
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>☛ PYTHON COMMENTS
+					</ul>
+		</h3>
+		<p class="main">
+			Comments are very important while writing a program. It describes
+			what's going on inside a program so that a person looking at the
+			source code does not have a hard time figuring it out. You might
+			forget the key details of the program you just wrote in a month's
+			time. So taking time to explain these concepts in form of comments is
+			always fruitful. <br> In Python, we use the hash (#) symbol to
+			start writing a comment.
 		<p class="example" style="font-size: 17px">
-			select_difficulty(2)<br>
+			#This is a comment<br> #print out Hello<br> print('Hello')<br>
 		<p class="main">
-			Although easier, this method is not recommended. Using the full
-			namespace avoids confusion and prevents two same identifier names
-			from colliding. <br> While importing packages, Python looks in
-			the list of directories defined in sys.path, similar as for module
-			search path.<br>
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						<ul>Multi-line comments
+						</ul>
+		</h3>
+		<p class="main">If we have comments that extend multiple lines,
+			one way of doing it is to use hash (#) in the beginning of each line.
+			For example:
+		<p class="example" style="font-size: 17px">
+			#This is a long comment<br> #and it extends<br> #to
+			multiple lines<br>
+		<p class="main">
+			Another way of doing this is to use triple quotes, either ' ' ' or "
+			" ".<br> These triple quotes are generally used for multi-line
+			strings. But they can be used as multi-line comment as well. Unless
+			they are not docstrings, they do not generate any extra code. <br>
+		<p class="example" style="font-size: 17px">
+			" " "This is also a<br> perfect example of<br> multi-line
+			comments" " "<br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						<ul>Docstring in Python
+						</ul>
+		</h3>
+		<p class="main">
+			Docstring is short for documentation string. <br> It is a string
+			that occurs as the first statement in a module, function, class, or
+			method definition. We must write what a function/class does in the
+			docstring. <br> Triple quotes are used while writing docstrings.
+			For example:<br>
+		<p class="example" style="font-size: 17px">
+			def double(num):<br> """Function to double the value"""<br>
+			return 2*num<br>
 	</div>
-	<a href="/modules" class="previous">&laquo; Previous</a>
+	<a href="/domain" class="previous">&laquo; Previous</a>
 	<a href="#" class="previous1">Take Assessment</a>
-	<a href="/number" class="next">Next &raquo;</a>
+	<a href="/variables" class="next">Next &raquo;</a>
 
 
 	<div class='w3-sidebar w3-collapse' id='sidenav'>
@@ -307,9 +467,9 @@ p.ex1 {
 				<p>
 					<a target="_top" href="/python">Getting Started</a> <a
 						target="_top" href="/silent">Silent features</a> <a target="_top"
-						href="/domain">Domain</a> <a target="_top" href="/syntax">Basic
-						syntax</a> <a target="_top" href="/variables">Variables</a> <a
-						target="_top" href="/dataTypes">Data Types</a> <a target="_top"
+						href="/domain">Domain</a> <a target="_top" a class="active"
+						href="/syntax">Basic syntax</a> <a target="_top" href="/variables">Variables</a>
+					<a target="_top" href="/dataTypes">Data Types</a> <a target="_top"
 						href="/typeConversion">Type Conversion</a> <a target="_top"
 						href="/input">I/O and Import</a> <a target="_top"
 						href="/operators">Operators</a> <a target="_top" href="/nameSpace">Name
@@ -329,8 +489,7 @@ p.ex1 {
 					<a target="_top" href="/anonymous">Anonymous Function</a> <a
 						target="_top" href="/globalLocal">Global, Local and Nonlocal</a> <a
 						target="_top" href="/global1">Global Keyword</a> <a target="_top"
-						href="/modules">Modules</a> <a target="_top" a class="active"
-						href="/package">Package</a>
+						href="/modules">Modules</a> <a target="_top" href="/package">Package</a>
 				<p class="main1">
 					Datatypes<br>
 				<p>

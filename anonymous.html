@@ -216,85 +216,119 @@ p.ex1 {
 <body style="width: 95%">
 
 	<div class="main">
-		<h1 align="center" style="color: #33adff;">Python Package</h1>
+		<h1 align="center" style="color: #33adff;">Python
+			Anonymous/Lambda Function</h1>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>What are lambda functions in Python?
+					</ul>
+		</h3>
+		<p class="main">
+			In Python, anonymous function is a function that is defined without a
+			name. <br> While normal functions are defined using the def
+			keyword, in Python anonymous functions are defined using the lambda
+			keyword. <br> Hence, anonymous functions are also called lambda
+			functions. <br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>How to use lambda Functions in Python?
+					</ul>
+		</h3>
+		<p class="main">
+			A lambda function in python has the following syntax. <br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Syntax of Lambda Function in python
+					</ul>
+		</h3>
+		<p class="example" style="font-size: 17px">
+			lambda arguments: expression <br>
+		<p class="main">
+			ILambda functions can have any number of arguments but only one
+			expression. The expression is evaluated and returned. Lambda
+			functions can be used wherever function objects are required. <br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Example of Lambda Function in python
+					</ul>
+		</h3>
+		<p class="main">
+			In the above program, lambda x: x * 2 is the lambda function. Here x
+			is the argument and x * 2 is the expression that gets evaluated and
+			returned. <br> This function has no name. It returns a function
+			object which is assigned to the identifier double. We can now call it
+			as a normal function. The statement
+		<p class="example" style="font-size: 17px">
+			double = lambda x: x * 2 <br>
+		<p class="main">
+			is nearly the same as <br>
+		<p class="example" style="font-size: 17px">
+			def double(x):<br> return x * 2<br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Use of Lambda Function in python
+					</ul>
+		</h3>
 		<br>
 		<p class="main">
-		<h3 style="font-size: 25px">
-			<ul>
-				<ul>
-					<ul>What are packages?
-					</ul>
-		</h3>
-		<p class="main">
-			We don't usually store all of our files in our computer in the same
-			location. We use a well-organized hierarchy of directories for easier
-			access. <br>
-			<br> Similar files are kept in the same directory, for example,
-			we may keep all the songs in the "music" directory. Analogous to
-			this, Python has packages for directories and modules for files. <br>
-			<br> As our application program grows larger in size with a lot
-			of modules, we place similar modules in one package and different
-			modules in different packages. This makes a project (program) easy to
-			manage and conceptually clear. <br>
-			<br> Similar, as a directory can contain sub-directories and
-			files, a Python package can have sub-packages and modules. <br>
-			<br> A directory must contain a file named __init__.py in order
-			for Python to consider it as a package. This file can be left empty
-			but we generally place the initialization code for that package in
-			this file. <br>
-			<br> Here is an example. Suppose we are developing a game, one
-			possible organization of packages and modules could be as shown in
-			the figure below.<br>
-		<p align="center" class="main">
-			<img class="img-responsive" src="static/img/970x647/19.jpg"
-				alt="Python Image">
+			We use lambda functions when we require a nameless function for a
+			short period of time. <br> In Python, we generally use it as an
+			argument to a higher-order function (a function that takes in other
+			functions as arguments). Lambda functions are used along with
+			built-in functions like filter(), map() etc. <br>
 		<p class="main">
 		<h3 style="font-size: 25px">
 			<ul>
 				<ul>
-					<ul>Importing module from a package
+					<ul>Example use with filter()
 					</ul>
 		</h3>
 		<p class="main">
+			The filter() function in Python takes in a function and a list as
+			arguments. <br>
 		<p class="main">
-			We can import modules from packages using the dot (.) operator. <br>
-			For example, if want to import the start module in the above example,
-			it is done as follows. <br>
+			The function is called with all the items in the list and a new list
+			is returned which contains items for which the function evaluats to
+			True. <br> Here is an example use of filter() function to filter
+			out only even numbers from a list. <br>
 		<p class="example" style="font-size: 17px">
-			import Game.Level.start<br>
+			# Program to filter out only the even items from a list<br> <br>
+			my_list = [1, 5, 4, 6, 8, 11, 3, 12]<br> <br> new_list =
+			list(filter(lambda x: (x%2 == 0) , my_list))<br> <br> #
+			Output: [4, 6, 8, 12]<br> print(new_list)<br>
 		<p class="main">
-			Now if this module contains a function named select_difficulty(), we
-			must use the full name to reference it.<br>
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Example use with map()
+					</ul>
+		</h3>
+		<p class="main">
+			The map() function in Python takes in a function and a list. <br>
+			The function is called with all the items in the list and a new list
+			is returned which contains items returned by that function for each
+			item. <br> Here is an example use of map() function to double
+			all the items in a list. <br>
 		<p class="example" style="font-size: 17px">
-			Game.Level.start.select_difficulty(2)<br>
-		<p class="main">
-			If this construct seems lengthy, we can import the module without the
-			package prefix as follows. <br>
-		<p class="example" style="font-size: 17px">
-			from Game.Level import start<br>
-		<p class="main">
-			We can now call the function simply as follows. <br>
-		<p class="example" style="font-size: 17px">
-			start.select_difficulty(2)<br>
-		<p class="main">
-			Yet another way of importing just the required function (or class or
-			variable) form a module within a package would be as follows.<br>
-		<p class="example" style="font-size: 17px">
-			from Game.Level.start import select_difficulty<br>
-		<p class="main">
-			Now we can directly call this function.<br>
-		<p class="example" style="font-size: 17px">
-			select_difficulty(2)<br>
-		<p class="main">
-			Although easier, this method is not recommended. Using the full
-			namespace avoids confusion and prevents two same identifier names
-			from colliding. <br> While importing packages, Python looks in
-			the list of directories defined in sys.path, similar as for module
-			search path.<br>
+			# Program to double each item in a list using map() <br>
+			<br> my_list = [1, 5, 4, 6, 8, 11, 3, 12] <br>
+			<br> new_list = list(map(lambda x: x * 2 , my_list)) <br>
+			<br> # Output: [2, 10, 8, 12, 16, 22, 6, 24]<br>
+			print(new_list)<br>
 	</div>
-	<a href="/modules" class="previous">&laquo; Previous</a>
-	<a href="#" class="previous1">Take Assessment</a>
-	<a href="/number" class="next">Next &raquo;</a>
+	<a href="/recursion" class="previous">&laquo; Previous</a>
+
+	<a href="/globalLocal" class="next">Next &raquo;</a>
 
 
 	<div class='w3-sidebar w3-collapse' id='sidenav'>
@@ -326,10 +360,10 @@ p.ex1 {
 				<p>
 					<a target="_top" href="/function">Function</a> <a target="_top"
 						href="/argument">Argument</a> <a target="_top" href="/recursion">Recursion</a>
-					<a target="_top" href="/anonymous">Anonymous Function</a> <a
-						target="_top" href="/globalLocal">Global, Local and Nonlocal</a> <a
-						target="_top" href="/global1">Global Keyword</a> <a target="_top"
-						href="/modules">Modules</a> <a target="_top" a class="active"
+					<a target="_top" a class="active" href="/anonymous">Anonymous
+						Function</a> <a target="_top" href="/globalLocal">Global, Local
+						and Nonlocal</a> <a target="_top" href="/global1">Global Keyword</a> <a
+						target="_top" href="/modules">Modules</a> <a target="_top"
 						href="/package">Package</a>
 				<p class="main1">
 					Datatypes<br>

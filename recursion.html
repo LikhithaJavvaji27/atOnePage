@@ -216,85 +216,97 @@ p.ex1 {
 <body style="width: 95%">
 
 	<div class="main">
-		<h1 align="center" style="color: #33adff;">Python Package</h1>
-		<br>
+		<h1 align="center" style="color: #33adff;">Python Recursion</h1>
 		<p class="main">
 		<h3 style="font-size: 25px">
 			<ul>
 				<ul>
-					<ul>What are packages?
+					<ul>What is recursion in Python?
 					</ul>
 		</h3>
 		<p class="main">
-			We don't usually store all of our files in our computer in the same
-			location. We use a well-organized hierarchy of directories for easier
-			access. <br>
-			<br> Similar files are kept in the same directory, for example,
-			we may keep all the songs in the "music" directory. Analogous to
-			this, Python has packages for directories and modules for files. <br>
-			<br> As our application program grows larger in size with a lot
-			of modules, we place similar modules in one package and different
-			modules in different packages. This makes a project (program) easy to
-			manage and conceptually clear. <br>
-			<br> Similar, as a directory can contain sub-directories and
-			files, a Python package can have sub-packages and modules. <br>
-			<br> A directory must contain a file named __init__.py in order
-			for Python to consider it as a package. This file can be left empty
-			but we generally place the initialization code for that package in
-			this file. <br>
-			<br> Here is an example. Suppose we are developing a game, one
-			possible organization of packages and modules could be as shown in
-			the figure below.<br>
-		<p align="center" class="main">
-			<img class="img-responsive" src="static/img/970x647/19.jpg"
-				alt="Python Image">
+			Recursion is the process of defining something in terms of itself. <br>
+			A physical world example would be to place two parallel mirrors
+			facing each other. Any object in between them would be reflected
+			recursively. <br>
 		<p class="main">
 		<h3 style="font-size: 25px">
 			<ul>
 				<ul>
-					<ul>Importing module from a package
+					<ul>Python Recursive Function
 					</ul>
 		</h3>
 		<p class="main">
+			We know that in Python, a function can call other functions. It is
+			even possible for the function to call itself. These type of
+			construct are termed as recursive functions. <br> Following is
+			an example of recursive function to find the factorial of an integer.
+			<br> Factorial of a number is the product of all the integers
+			from 1 to that number. <br>
+			<br>For example, the factorial of 6 (denoted as 6!) is
+			1*2*3*4*5*6 = 720. <br>
 		<p class="main">
-			We can import modules from packages using the dot (.) operator. <br>
-			For example, if want to import the start module in the above example,
-			it is done as follows. <br>
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Example of recursive function
+					</ul>
+		</h3>
 		<p class="example" style="font-size: 17px">
-			import Game.Level.start<br>
+			# An example of a recursive function to <br> # find the
+			factorial of a number <br> <br> def calc_factorial(x): <br>
+			"""This is a recursive function <br> to find the factorial of an
+			integer""" <br> <br> if x == 1: <br> return 1 <br>
+			else: <br> return (x * calc_factorial(x-1)) <br> <br>
+			num = 4 <br> print("The factorial of", num, "is",
+			calc_factorial(num)) <br>
 		<p class="main">
-			Now if this module contains a function named select_difficulty(), we
-			must use the full name to reference it.<br>
+			In the above example, calc_factorial() is a recursive functions as it
+			calls itself. <br> When we call this function with a positive
+			integer, it will recursively call itself by decreasing the number. <br>
+			Each function call multiples the number with the factorial of number
+			1 until the number is equal to one. This recursive call can be
+			explained in the following steps. <br>
 		<p class="example" style="font-size: 17px">
-			Game.Level.start.select_difficulty(2)<br>
+			calc_factorial(4) # 1st call with 4 <br> 4 * calc_factorial(3) #
+			2nd call with 3 <br> 4 * 3 * calc_factorial(2) # 3rd call with 2
+			<br> 4 * 3 * 2 * calc_factorial(1) # 4th call with 1 <br> 4
+			* 3 * 2 * 1 # return from 4th call as number=1 <br> 4 * 3 * 2 #
+			return from 3rd call <br> 4 * 6 # return from 2nd call <br>
+			24 # return from 1st call <br>
 		<p class="main">
-			If this construct seems lengthy, we can import the module without the
-			package prefix as follows. <br>
-		<p class="example" style="font-size: 17px">
-			from Game.Level import start<br>
+			Our recursion ends when the number reduces to 1. This is called the
+			base condition. <br> Every recursive function must have a base
+			condition that stops the recursion or else the function calls itself
+			infinitely. <br>
 		<p class="main">
-			We can now call the function simply as follows. <br>
-		<p class="example" style="font-size: 17px">
-			start.select_difficulty(2)<br>
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Advantages of Recursion
+					</ul>
+		</h3>
 		<p class="main">
-			Yet another way of importing just the required function (or class or
-			variable) form a module within a package would be as follows.<br>
-		<p class="example" style="font-size: 17px">
-			from Game.Level.start import select_difficulty<br>
+			1. Recursive functions make the code look clean and elegant.<br>
+			2. A complex task can be broken down into simpler sub-problems using
+			recursion.<br> 3. Sequence generation is easier with recursion
+			than using some nested iteration.<br>
 		<p class="main">
-			Now we can directly call this function.<br>
-		<p class="example" style="font-size: 17px">
-			select_difficulty(2)<br>
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Disadvantages of Recursion
+					</ul>
+		</h3>
 		<p class="main">
-			Although easier, this method is not recommended. Using the full
-			namespace avoids confusion and prevents two same identifier names
-			from colliding. <br> While importing packages, Python looks in
-			the list of directories defined in sys.path, similar as for module
-			search path.<br>
+			1. Sometimes the logic behind recursion is hard to follow through.<br>
+			2. Recursive calls are expensive (inefficient) as they take up a lot
+			of memory and time.<br> 3. Recursive functions are hard to
+			debug.<br>
 	</div>
-	<a href="/modules" class="previous">&laquo; Previous</a>
+	<a href="/argument" class="previous">&laquo; Previous</a>
 	<a href="#" class="previous1">Take Assessment</a>
-	<a href="/number" class="next">Next &raquo;</a>
+	<a href="/anonymous" class="next">Next &raquo;</a>
 
 
 	<div class='w3-sidebar w3-collapse' id='sidenav'>
@@ -325,11 +337,11 @@ p.ex1 {
 					Functions<br>
 				<p>
 					<a target="_top" href="/function">Function</a> <a target="_top"
-						href="/argument">Argument</a> <a target="_top" href="/recursion">Recursion</a>
-					<a target="_top" href="/anonymous">Anonymous Function</a> <a
-						target="_top" href="/globalLocal">Global, Local and Nonlocal</a> <a
-						target="_top" href="/global1">Global Keyword</a> <a target="_top"
-						href="/modules">Modules</a> <a target="_top" a class="active"
+						href="/argument">Argument</a> <a target="_top" a class="active"
+						href="/recursion">Recursion</a> <a target="_top" href="/anonymous">Anonymous
+						Function</a> <a target="_top" href="/globalLocal">Global, Local
+						and Nonlocal</a> <a target="_top" href="/global1">Global Keyword</a> <a
+						target="_top" href="/modules">Modules</a> <a target="_top"
 						href="/package">Package</a>
 				<p class="main1">
 					Datatypes<br>

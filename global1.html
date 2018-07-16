@@ -216,85 +216,218 @@ p.ex1 {
 <body style="width: 95%">
 
 	<div class="main">
-		<h1 align="center" style="color: #33adff;">Python Package</h1>
+		<h1 align="center" style="color: #33adff;">Python Global Keyword</h1>
+		<p class="main">
+			Before reading this article, make sure you have got some basics of
+			Python Global, Local and Nonlocal Variables. <br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Introduction to global Keyword
+					</ul>
+		</h3>
+		<p class="main">
+			In Python, global keyword allows you to modify the variable outside
+			of the current scope. It is used to create a global variable and make
+			changes to the variable in a local context. <br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Rules of global Keyword
+					</ul>
+		</h3>
+		<p class="main">The basic rules for global keyword in Python are:
+
+		<ul>
+			<ul>
+				<ul>
+					<ul>
+						<li style="font-size: 20px">When we create a variable inside
+							a function, it’s local by default.</li>
+						<li style="font-size: 20px">When we define a variable outside
+							of a function, it’s global by default. You don’t have to use
+							global keyword.</li>
+						<li style="font-size: 20px">We use global keyword to read and
+							write a global variable inside a function.</LI>
+						<li style="font-size: 20px">Use of global keyword outside a
+							function has no effect</li>
+					</ul>
+				</ul>
+			</ul>
+		</ul>
+		</ul>
+		</ul>
+		</ul>
+		</ul>
+
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Use of global Keyword (With Example)
+					</ul>
+		</h3>
+		<p class="main">Let’s take an example.
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Example 1: Accessing global Variable From Inside a
+						Function
+					</ul>
+		</h3>
+
+
+		<p class="example" style="font-size: 17px">
+			c = 1 # global variable<br> <br> def add():<br>
+			print(c)<br> <br> add() <br>
+		<p class="main">
+			When we run the code, the will output be: <br>
+		<p class="example" style="font-size: 17px">
+			1<br>
+		<p class="main">
+			However, we may have some scenarios where we need to modify the
+			global variable from inside a function. <br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Example 2: Modifying Global Variable From Inside the
+						Function
+					</ul>
+		</h3>
+		<p class="example" style="font-size: 17px">
+			c = 1 # global variable<br> <br> def add():<br> c = c
+			+ 2 # increment c by 2<br> print(c)<br> <br> add()<br>
+		<p class="main">
+			When we run the code, the will output be: <br>
+		<p class="example" style="font-size: 17px">
+			UnboundLocalError: local variable 'c' referenced before assignment<br>
+		<p class="main">
+			This is because we can only access the global variable but cannot
+			modify it from inside the function. <br> The solution for this
+			is to use the global keyword. <br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Example 3: Changing Global Variable From Inside a Function
+						using global
+					</ul>
+		</h3>
 		<br>
 		<p class="main">
-		<h3 style="font-size: 25px">
-			<ul>
-				<ul>
-					<ul>What are packages?
-					</ul>
-		</h3>
-		<p class="main">
-			We don't usually store all of our files in our computer in the same
-			location. We use a well-organized hierarchy of directories for easier
-			access. <br>
-			<br> Similar files are kept in the same directory, for example,
-			we may keep all the songs in the "music" directory. Analogous to
-			this, Python has packages for directories and modules for files. <br>
-			<br> As our application program grows larger in size with a lot
-			of modules, we place similar modules in one package and different
-			modules in different packages. This makes a project (program) easy to
-			manage and conceptually clear. <br>
-			<br> Similar, as a directory can contain sub-directories and
-			files, a Python package can have sub-packages and modules. <br>
-			<br> A directory must contain a file named __init__.py in order
-			for Python to consider it as a package. This file can be left empty
-			but we generally place the initialization code for that package in
-			this file. <br>
-			<br> Here is an example. Suppose we are developing a game, one
-			possible organization of packages and modules could be as shown in
-			the figure below.<br>
-		<p align="center" class="main">
-			<img class="img-responsive" src="static/img/970x647/19.jpg"
-				alt="Python Image">
+			A variable declared inside the function's body or in the local scope
+			is known as local variable. <br>
 		<p class="main">
 		<h3 style="font-size: 25px">
 			<ul>
 				<ul>
-					<ul>Importing module from a package
+					<ul>Example 2: Accessing local variable outside the scope
+					</ul>
+		</h3>
+
+		<p class="example" style="font-size: 17px">
+			c = 0 # global variable<br> <br> def add():<br> global
+			c<br> c = c + 2 # increment by 2<br> print("Inside add():",
+			c)<br> <br> add()<br> print("In main:", c)<br>
+		<p class="main">When we run the code, the will output be:
+		<p class="example" style="font-size: 17px">
+			Inside add(): 2<br> In main: 2<br>
+		<p class="main">
+			In the above program, we define c as a global keyword inside the
+			add() function. <br> Then, we increment the variable c by 1, i.e
+			c = c + 2. After that, we call the add() function. Finally, we print
+			global variable c. <br> As we can see, change also occured on
+			the global variable outside the function, c = 2. <br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Global Variables Across Python Modules
 					</ul>
 		</h3>
 		<p class="main">
+			In Python, we create a single module config.py to hold global
+			variables and share information across Python modules within the same
+			program. <br> Here is how we can share global variable across
+			the python modules. <br>
 		<p class="main">
-			We can import modules from packages using the dot (.) operator. <br>
-			For example, if want to import the start module in the above example,
-			it is done as follows. <br>
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Example 4 : Share a global Variable Across Python Modules
+					</ul>
+		</h3>
+		<p class="main">
+			Create a config.py file, to store global variables<br>
 		<p class="example" style="font-size: 17px">
-			import Game.Level.start<br>
+			a = 0<br> b = "empty"<br>
 		<p class="main">
-			Now if this module contains a function named select_difficulty(), we
-			must use the full name to reference it.<br>
+			Create a update.py file, to change global variables<br>
 		<p class="example" style="font-size: 17px">
-			Game.Level.start.select_difficulty(2)<br>
+			import config<br> <br> config.a = 10<br> config.b =
+			"alphabet"<br>
 		<p class="main">
-			If this construct seems lengthy, we can import the module without the
-			package prefix as follows. <br>
+			<br> Create a main.py file, to test changes in value<br> <br>
 		<p class="example" style="font-size: 17px">
-			from Game.Level import start<br>
+			import config<br> import update<br> <br>
+			print(config.a)<br> print(config.b)<br>
 		<p class="main">
-			We can now call the function simply as follows. <br>
+			When we run the main.py file, the output will be<br>
 		<p class="example" style="font-size: 17px">
-			start.select_difficulty(2)<br>
+			10<br> alphabet<br>
 		<p class="main">
-			Yet another way of importing just the required function (or class or
-			variable) form a module within a package would be as follows.<br>
+			In the above, we create three files: config.py, update.py and
+			main.py. <br> The module config.py stores global variables of a
+			and b. In update.py file, we import the config.py module and modify
+			the values of a and b. Similarly, in main.py file we import both
+			config.py and update.py module. Finally, we print and test the values
+			of global variables whether they are changed or not. <br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Global in Nested Functions
+					</ul>
+		</h3>
+		<br>
+		<p class="main">
+			Here is how you can use a global variable in nested function. <br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Example 5: Using a Global Variable in Nested Function
+					</ul>
+		</h3>
+		<br>
 		<p class="example" style="font-size: 17px">
-			from Game.Level.start import select_difficulty<br>
-		<p class="main">
-			Now we can directly call this function.<br>
+			def foo():<br> x = 20<br> <br> def bar():<br>
+			global x<br> x = 25<br> <br> print("Before calling
+			bar: ", x)<br> print("Calling bar now")<br> bar()<br>
+			print("After calling bar: ", x)<br> <br> foo()<br>
+			print("x in main : ", x)<br>
+		<p class="main">The output is :
 		<p class="example" style="font-size: 17px">
-			select_difficulty(2)<br>
+			Before calling bar: 20<br> Calling bar now<br> After
+			calling bar: 20<br> x in main : 25<br>
 		<p class="main">
-			Although easier, this method is not recommended. Using the full
-			namespace avoids confusion and prevents two same identifier names
-			from colliding. <br> While importing packages, Python looks in
-			the list of directories defined in sys.path, similar as for module
-			search path.<br>
+			In the above program, we declare global variable inside the nested
+			function bar(). Inside foo() function, x has no effect of global
+			keyword. <br> Before and after calling bar(), the variable x
+			takes the value of local variable i.e x = 20. Outside of the foo()
+			function, the variable x will take value defined in the bar()
+			function i.e x = 25. This is because we have used global keyword in x
+			to create global variable inside the bar() function (local scope). <br>
+			If we make any changes inside the bar() function, the changes appears
+			outside the local scope, i.e. foo(). <br>
 	</div>
-	<a href="/modules" class="previous">&laquo; Previous</a>
+	<a href="/globalLocal" class="previous">&laquo; Previous</a>
 	<a href="#" class="previous1">Take Assessment</a>
-	<a href="/number" class="next">Next &raquo;</a>
+	<a href="/modules" class="next">Next &raquo;</a>
 
 
 	<div class='w3-sidebar w3-collapse' id='sidenav'>
@@ -328,8 +461,8 @@ p.ex1 {
 						href="/argument">Argument</a> <a target="_top" href="/recursion">Recursion</a>
 					<a target="_top" href="/anonymous">Anonymous Function</a> <a
 						target="_top" href="/globalLocal">Global, Local and Nonlocal</a> <a
-						target="_top" href="/global1">Global Keyword</a> <a target="_top"
-						href="/modules">Modules</a> <a target="_top" a class="active"
+						target="_top" a class="active" href="/global1">Global Keyword</a>
+					<a target="_top" href="/modules">Modules</a> <a target="_top"
 						href="/package">Package</a>
 				<p class="main1">
 					Datatypes<br>

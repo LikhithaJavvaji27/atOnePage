@@ -216,85 +216,248 @@ p.ex1 {
 <body style="width: 95%">
 
 	<div class="main">
-		<h1 align="center" style="color: #33adff;">Python Package</h1>
-		<br>
+		<h1 align="center" style="color: #33adff;">PYTHON Type Conversion
+			and Type Casting</h1>
+		<p class="main">Before learning Type Conversion in Python, you
+			should have knowledge about Python Data Types.
 		<p class="main">
 		<h3 style="font-size: 25px">
 			<ul>
 				<ul>
-					<ul>What are packages?
+					<ul>☛ TYPE CONVERSION
 					</ul>
 		</h3>
 		<p class="main">
-			We don't usually store all of our files in our computer in the same
-			location. We use a well-organized hierarchy of directories for easier
-			access. <br>
-			<br> Similar files are kept in the same directory, for example,
-			we may keep all the songs in the "music" directory. Analogous to
-			this, Python has packages for directories and modules for files. <br>
-			<br> As our application program grows larger in size with a lot
-			of modules, we place similar modules in one package and different
-			modules in different packages. This makes a project (program) easy to
-			manage and conceptually clear. <br>
-			<br> Similar, as a directory can contain sub-directories and
-			files, a Python package can have sub-packages and modules. <br>
-			<br> A directory must contain a file named __init__.py in order
-			for Python to consider it as a package. This file can be left empty
-			but we generally place the initialization code for that package in
-			this file. <br>
-			<br> Here is an example. Suppose we are developing a game, one
-			possible organization of packages and modules could be as shown in
-			the figure below.<br>
-		<p align="center" class="main">
-			<img class="img-responsive" src="static/img/970x647/19.jpg"
-				alt="Python Image">
+			The process of converting the value of one data type (integer,
+			string, float, etc.) to another data type is called type conversion.
+			Python has two types of type conversion. <BR>
+		<ul>
+			<ul>
+				<ul>
+					<ul>
+						<li style="font-size: 20px">Implicit Type Conversion</li>
+						<li style="font-size: 20px">Explicit Type Conversion</li>
+					</ul>
+				</ul>
+			</ul>
+		</ul>
+		</ul>
+		</ul>
+		</ul>
+		</ul>
 		<p class="main">
 		<h3 style="font-size: 25px">
 			<ul>
 				<ul>
-					<ul>Importing module from a package
-					</ul>
+					<ul>
+						<ul>Implicit Type Conversion:
+						</ul>
 		</h3>
 		<p class="main">
+			In Implicit type conversion, Python automatically converts one data
+			type to another data type. This process doesn't need any user
+			involvement. <br> Let's see an example where Python promotes
+			conversion of lower datatype (integer) to higher data type (float) to
+			avoid data loss.
 		<p class="main">
-			We can import modules from packages using the dot (.) operator. <br>
-			For example, if want to import the start module in the above example,
-			it is done as follows. <br>
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						<ul>Example 1: Converting integer to float
+						</ul>
+		</h3>
 		<p class="example" style="font-size: 17px">
-			import Game.Level.start<br>
-		<p class="main">
-			Now if this module contains a function named select_difficulty(), we
-			must use the full name to reference it.<br>
+			num_int = 123<BR> num_flo = 1.23<BR> <BR> num_new =
+			num_int + num_flo<BR> <BR> print("datatype of
+			num_int:",type(num_int))<BR> print("datatype of
+			num_flo:",type(num_flo))<BR> <BR> print("Value of
+			num_new:",num_new)<BR> print("datatype of
+			num_new:",type(num_new))<BR>
+		<p class="main">When you run the program, the output will be:
 		<p class="example" style="font-size: 17px">
-			Game.Level.start.select_difficulty(2)<br>
-		<p class="main">
-			If this construct seems lengthy, we can import the module without the
-			package prefix as follows. <br>
-		<p class="example" style="font-size: 17px">
-			from Game.Level import start<br>
-		<p class="main">
-			We can now call the function simply as follows. <br>
-		<p class="example" style="font-size: 17px">
-			start.select_difficulty(2)<br>
-		<p class="main">
-			Yet another way of importing just the required function (or class or
-			variable) form a module within a package would be as follows.<br>
-		<p class="example" style="font-size: 17px">
-			from Game.Level.start import select_difficulty<br>
-		<p class="main">
-			Now we can directly call this function.<br>
-		<p class="example" style="font-size: 17px">
-			select_difficulty(2)<br>
-		<p class="main">
-			Although easier, this method is not recommended. Using the full
-			namespace avoids confusion and prevents two same identifier names
-			from colliding. <br> While importing packages, Python looks in
-			the list of directories defined in sys.path, similar as for module
-			search path.<br>
+			datatype of num_int:
+			<class'int'> <BR>
+			datatype of num_flo: <class'float'> <BR>
+			<BR>
+			Value of num_new: 124.23<BR>
+			datatype of num_new: <class'float'> <BR>
+			<br>
+			<p class="main">In the above program,
+			<ul>
+				<ul>
+					<ul>
+						<ul>
+							<li style="font-size: 20px">We add two variables num_int and
+								num_flo, storing the value in num_new.</li>
+							<li style="font-size: 20px">We will look at the data type of
+								all three objects respectively.</li>
+							<li style="font-size: 20px">In the output we can see the
+								datatype of num_int is an integer, datatype of num_flo is a
+								float.</li>
+							<li style="font-size: 20px">Also, we can see the num_new has
+								float data type because Python always converts smaller data type
+								to larger data type to avoid the loss of data.</li>
+						</ul>
+					</ul>
+				</ul>
+			</ul>
+			</ul>
+			</ul>
+			</ul>
+			</ul>
+
+			<p class="main">Now, let's try adding a string and an integer,
+				and see how Python treats it.
+			<p class="main">
+			<h3 style="font-size: 25px">
+				<ul>
+					<ul>
+						<ul>
+							<ul>Example 2: Addition of string(higher) data type and
+								integer(lower) datatype
+							</ul>
+			</h3>
+			<p class="example" style="font-size: 17px">
+				num_int = 123<br> num_str = "456"<br> <br>
+				print("Data type of num_int:",type(num_int))<br> print("Data
+				type of num_str:",type(num_str))<br> <br>
+				print(num_int+num_str)<br>
+			<p class="main">When you run the program, the output will be:
+			<p class="example" style="font-size: 17px">
+				Data type of num_int:
+				<class'int'> <br>
+				Data type of num_str: <class'str'> <br>
+				<br>
+				Traceback (most recent call last): <br>
+				File "python", line 7, in <module> <br>
+				TypeError: unsupported operand type(s) for +: 'int' and 'str'<br>
+				<p class="main">In the above program,
+				<ul>
+					<ul>
+						<ul>
+							<ul>
+								<li style="font-size: 20px">We add two variable num_int and
+									num_str.</li>
+								<li style="font-size: 20px">As we can see from the output,
+									we got typeerror. Python is not able use Implicit Conversion in
+									such condition.</li>
+								<li style="font-size: 20px">However Python has the solution
+									for this type of situation which is know as Explicit
+									Conversion.</li>
+							</ul>
+						</ul>
+					</ul>
+				</ul>
+				</ul>
+				</ul>
+				</ul>
+				</ul>
+
+				<p class="main">
+				<h3 style="font-size: 25px">
+					<ul>
+						<ul>
+							<ul>
+								<ul>Explicit Type Conversion:
+								</ul>
+				</h3>
+				<p class="main">
+
+					In Explicit Type Conversion, users convert the data type of an
+					object to required data type. We use the predefined functions like
+					int(), float(), str(), etc to perform explicit type conversion. <br>
+					This type conversion is also called typecasting because the user
+					casts (change) the data type of the objects.<br> <br>Syntax
+					:
+				<p class="example" style="font-size: 17px">
+					(required_datatype)(expression)<br>
+				<p class="main">Typecasting can be done by assigning the
+					required data type function to the expression.
+				<p class="main">
+				<h3 style="font-size: 25px">
+					<ul>
+						<ul>
+							<ul>
+								<ul>Example 3: Addition of string and integer using
+									explicit conversion
+								</ul>
+				</h3>
+				<p class="example" style="font-size: 17px">
+					num_int = 123<br> num_str = "456"<br> <br>
+					print("Data type of num_int:",type(num_int))<br> print("Data
+					type of num_str before Type Casting:",type(num_str))<br> <br>
+					num_str = int(num_str)<br> print("Data type of num_str after
+					Type Casting:",type(num_str))<br> <br> num_sum = num_int
+					+ num_str<br> <br> print("Sum of num_int and
+					num_str:",num_sum)<br> print("Data type of the
+					sum:",type(num_sum))<br>
+				<p class="main">When you run the program, the output will be:
+				<p class="example" style="font-size: 17px">
+					Data type of num_int:
+					<class'int'> <br>
+					Data type of num_str before Type Casting: <class'str'> <br>
+					<br>
+					Data type of num_str after Type Casting: <class'int'> <br>
+					<br>
+					Sum of num_int and num_str: 579<br>
+					Data type of the sum: <class'int'> <br>
+					<p class="main">In the above program,
+					<ul>
+						<ul>
+							<ul>
+								<ul>
+									<li style="font-size: 20px">We add num_str and num_int
+										variable.</li>
+									<li style="font-size: 20px">We converted num_str from
+										string(higher) to integer(lower) type using int() function to
+										perform the addition.</li>
+									<li style="font-size: 20px">After converting num_str to a
+										integer value Python is able to add these two variable.</li>
+									<li style="font-size: 20px">We got the num_sum value and
+										data type to be integer.</li>
+								</ul>
+							</ul>
+						</ul>
+					</ul>
+					</ul>
+					</ul>
+					</ul>
+					</ul>
+
+					<p class="main">
+					<h3 style="font-size: 25px">
+						<ul>
+							<ul>
+								<ul>
+									<ul>
+										Key Points to Remember:
+										<br>
+										<ol>
+											<ol>
+												<li style="font-size: 20px">Type Conversion is the
+													conversion of object from one data type to another data
+													type.</li>
+												<li style="font-size: 20px">Implicit Type Conversion is
+													automatically performed by the Python interpreter.</li>
+												<li style="font-size: 20px">Python avoids the loss of
+													data in Implicit Type Conversion.</li>
+												<li style="font-size: 20px">Explicit Type Conversion is
+													also called Type Casting, the data types of object are
+													converted using predefined function by user.</li>
+												<li style="font-size: 20px">In Type Casting loss of
+													data may occur as we enforce the object to specific data
+													type.<br>
+											</ol>
+										</ol>
+									</ul>
+								</ul>
+							</ul>
+						</ul>
 	</div>
-	<a href="/modules" class="previous">&laquo; Previous</a>
+	<a href="/dataTypes" class="previous">&laquo; Previous</a>
 	<a href="#" class="previous1">Take Assessment</a>
-	<a href="/number" class="next">Next &raquo;</a>
+	<a href="/input" class="next">Next &raquo;</a>
 
 
 	<div class='w3-sidebar w3-collapse' id='sidenav'>
@@ -309,9 +472,9 @@ p.ex1 {
 						target="_top" href="/silent">Silent features</a> <a target="_top"
 						href="/domain">Domain</a> <a target="_top" href="/syntax">Basic
 						syntax</a> <a target="_top" href="/variables">Variables</a> <a
-						target="_top" href="/dataTypes">Data Types</a> <a target="_top"
-						href="/typeConversion">Type Conversion</a> <a target="_top"
-						href="/input">I/O and Import</a> <a target="_top"
+						target="_top" href="/dataTypes">Data Types</a> <a target="_top" a
+						class="active" href="/typeConversion">Type Conversion</a> <a
+						target="_top" href="/input">I/O and Import</a> <a target="_top"
 						href="/operators">Operators</a> <a target="_top" href="/nameSpace">Name
 						Space</a>
 				<p class="main1">
@@ -329,8 +492,7 @@ p.ex1 {
 					<a target="_top" href="/anonymous">Anonymous Function</a> <a
 						target="_top" href="/globalLocal">Global, Local and Nonlocal</a> <a
 						target="_top" href="/global1">Global Keyword</a> <a target="_top"
-						href="/modules">Modules</a> <a target="_top" a class="active"
-						href="/package">Package</a>
+						href="/modules">Modules</a> <a target="_top" href="/package">Package</a>
 				<p class="main1">
 					Datatypes<br>
 				<p>

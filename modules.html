@@ -216,85 +216,241 @@ p.ex1 {
 <body style="width: 95%">
 
 	<div class="main">
-		<h1 align="center" style="color: #33adff;">Python Package</h1>
+		<h1 align="center" style="color: #33adff;">Python Modules</h1>
 		<br>
 		<p class="main">
 		<h3 style="font-size: 25px">
 			<ul>
 				<ul>
-					<ul>What are packages?
+					<ul>What are modules in Python?
 					</ul>
 		</h3>
 		<p class="main">
-			We don't usually store all of our files in our computer in the same
-			location. We use a well-organized hierarchy of directories for easier
-			access. <br>
-			<br> Similar files are kept in the same directory, for example,
-			we may keep all the songs in the "music" directory. Analogous to
-			this, Python has packages for directories and modules for files. <br>
-			<br> As our application program grows larger in size with a lot
-			of modules, we place similar modules in one package and different
-			modules in different packages. This makes a project (program) easy to
-			manage and conceptually clear. <br>
-			<br> Similar, as a directory can contain sub-directories and
-			files, a Python package can have sub-packages and modules. <br>
-			<br> A directory must contain a file named __init__.py in order
-			for Python to consider it as a package. This file can be left empty
-			but we generally place the initialization code for that package in
-			this file. <br>
-			<br> Here is an example. Suppose we are developing a game, one
-			possible organization of packages and modules could be as shown in
-			the figure below.<br>
-		<p align="center" class="main">
-			<img class="img-responsive" src="static/img/970x647/19.jpg"
-				alt="Python Image">
+			Modules refer to a file containing Python statements and definitions.
+			<br> A file containing Python code, for e.g.: example.py, is
+			called a module and its module name would be example. <br> We
+			use modules to break down large programs into small manageable and
+			organized files. Furthermore, modules provide reusability of code. <br>
+			We can define our most used functions in a module and import it,
+			instead of copying their definitions into different programs. <br>
+			Let us create a module. Type the following and save it as example.py.<br>
+		<p class="example" style="font-size: 17px">
+			# Python Module example<br> <br> def add(a, b):<br>
+			"""This program adds two<br> numbers and return the result"""<br>
+			<br> result = a + b<br> return result <br>
+		<p class="main">Here, we have defined a function add() inside a
+			module named example. The function takes in two numbers and returns
+			their sum.
 		<p class="main">
 		<h3 style="font-size: 25px">
 			<ul>
 				<ul>
-					<ul>Importing module from a package
+					<ul>How to import modules in Python?
 					</ul>
 		</h3>
 		<p class="main">
-		<p class="main">
-			We can import modules from packages using the dot (.) operator. <br>
-			For example, if want to import the start module in the above example,
-			it is done as follows. <br>
+			We can import the definitions inside a module to another module or
+			the interactive interpreter in Python. <br> We use the import
+			keyword to do this. To import our previously defined module example
+			we type the following in the Python prompt.<br>
 		<p class="example" style="font-size: 17px">
-			import Game.Level.start<br>
+			>>> import example<br>
 		<p class="main">
-			Now if this module contains a function named select_difficulty(), we
-			must use the full name to reference it.<br>
+			This does not enter the names of the functions defined in example
+			directly in the current symbol table. It only enters the module name
+			example there. <br> Using the module name we can access the
+			function using dot (.) operation. For example: <br>
 		<p class="example" style="font-size: 17px">
-			Game.Level.start.select_difficulty(2)<br>
+			>>> example.add(4,5.5)<br> 9.5<br>
 		<p class="main">
-			If this construct seems lengthy, we can import the module without the
-			package prefix as follows. <br>
+			Python has a ton of standard modules available. <br> You can
+			check out the full list of Python standard modules and what they are
+			for. These files are in the Lib directory inside the location where
+			you installed Python. <br> Standard modules can be imported the
+			same way as we import our user-defined modules. <br> There are
+			various ways to import modules. They are listed as follows. <br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Python import statement
+					</ul>
+		</h3>
+		<p class="main">
+			We can import a module using import statement and access the
+			definitions inside it using the dot operator as described above. Here
+			is an example. <br>
 		<p class="example" style="font-size: 17px">
-			from Game.Level import start<br>
-		<p class="main">
-			We can now call the function simply as follows. <br>
+			# import statement example<br> # to import standard module math<br>
+			<br> import math<br> print("The value of pi is", math.pi)<br>
+		<p class="main">When we run the code, the will output be:
 		<p class="example" style="font-size: 17px">
-			start.select_difficulty(2)<br>
+			The value of pi is 3.141592653589793<br>
 		<p class="main">
-			Yet another way of importing just the required function (or class or
-			variable) form a module within a package would be as follows.<br>
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Import with renaming
+					</ul>
+		</h3>
+
+		<p class="main">
+			We can import a module by renaming it as follows.<br>
 		<p class="example" style="font-size: 17px">
-			from Game.Level.start import select_difficulty<br>
+			# import module by renaming it<br> <br> import math as m<br>
+			print("The value of pi is", m.pi)<br>
 		<p class="main">
-			Now we can directly call this function.<br>
+			We have renamed the math module as m. This can save us typing time in
+			some cases. <br> Note that the name math is not recognized in
+			our scope. Hence, math.pi is invalid, m.pi is the correct
+			implementation.<br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Python from...import statement
+					</ul>
+		</h3>
+		<p class="main">We can import specific names from a module without
+			importing the module as a whole. Here is an example.
 		<p class="example" style="font-size: 17px">
-			select_difficulty(2)<br>
+			# import only pi from math module<br> <br> from math import
+			pi<br> print("The value of pi is", pi)<br>
 		<p class="main">
-			Although easier, this method is not recommended. Using the full
-			namespace avoids confusion and prevents two same identifier names
-			from colliding. <br> While importing packages, Python looks in
-			the list of directories defined in sys.path, similar as for module
-			search path.<br>
+			We imported only the attribute pi from the module. <br> In such
+			case we don't use the dot operator. We could have imported multiple
+			attributes as follows.<br>
+		<p class="example" style="font-size: 17px">
+			>>> from math import pi, e<br> >>> pi<br> 3.141592653589793<br>
+			>>> e<br> 2.718281828459045<br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Import all names
+					</ul>
+		</h3>
+		<br>
+		<p class="main">
+			We can import all names(definitions) from a module using the
+			following construct.<br> <br>
+		<p class="example" style="font-size: 17px">
+			# import all names from the standard module math<br> <br>
+			from math import *<br> print("The value of pi is", pi)<br>
+		<p class="main">
+			We imported all the definitions from the math module. This makes all
+			names except those beginnig with an underscore, visible in our scope.
+			<br> Importing everything with the asterisk (*) symbol is not a
+			good programming practice. This can lead to duplicate definitions for
+			an identifier. It also hampers the readability of our code <br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Python Module Search Path
+					</ul>
+		</h3>
+		<br>
+		<p class="main">
+			While importing a module, Python looks at several places. Interpreter
+			first looks for a built-in module then (if not found) into a list of
+			directories defined in sys.path. The search is in this order. <br>
+		<ul>
+			<ul>
+				<ul>
+					<ul>
+						<li style="font-size: 20px">The current directory.</li>
+						<li style="font-size: 20px">PYTHONPATH (an environment
+							variable with a list of directory).</li>
+						<li style="font-size: 20px">The installation-dependent
+							default directory.</LI>
+
+					</ul>
+				</ul>
+			</ul>
+		</ul>
+		</ul>
+		</ul>
+		</ul>
+		</ul>
+		<p class="example" style="font-size: 17px">
+			>>> import sys<br> >>> sys.path<br> ['',<br>
+			'C:\\Python33\\Lib\\idlelib',<br>
+			'C:\\Windows\\system32\\python33.zip',<br> 'C:\\Python33\\DLLs',<br>
+			'C:\\Python33\\lib',<br> 'C:\\Python33',<br>
+			'C:\\Python33\\lib\\site-packages']<br>
+		<p class="main">
+			We can add modify this list to add our own path. <br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Reloading a module
+					</ul>
+		</h3>
+		<p class="main">
+			The Python interpreter imports a module only once during a session.
+			This makes things more efficient. Here is an example to show how this
+			works. <br> Suppose we have the following code in a module named
+			my_module. <br>
+		<p class="example" style="font-size: 17px">
+			# This module shows the effect of<br> # multiple imports and
+			reload<br> <br> print("This code got executed")<br>
+		<p class="main">
+			<br> Now we see the effect of multiple imports.<br> <br>
+		<p class="example" style="font-size: 17px">
+			>>> import my_module<br> This code got executed<br> >>>
+			import my_module<br> >>> import my_module<br>
+		<p class="main">
+			<br> We can see that our code got executed only once. This goes
+			to say that our module was imported only once. <br> Now if our
+			module changed during the course of the program, we would have to
+			reload it.One way to do this is to restart the interpreter. But this
+			does not help much. <br> Python provides a neat way of doing
+			this. We can use the reload() function inside the imp module to
+			reload a module. This is how its done. <br>
+		<p class="example" style="font-size: 17px">
+			>>> import imp<br> >>> import my_module<br> This code got
+			executed<br> >>> import my_module<br> >>>
+			imp.reload(my_module)<br>
+		<p class="main">
+			<br> This code got executed<br>
+			<module'my_module' from '.\\my_module.py'>
+			<br>
+			<p class="main">
+			<h3 style="font-size: 25px">
+				<ul>
+					<ul>
+						<ul>The dir() built-in function
+						</ul>
+			</h3>
+			<p class="main">
+				We can use the dir() function to find out names that are defined
+				inside a module. <br> For example, we have defined a function
+				add() in the module example that we had in the beginning. <br>
+			<p class="example" style="font-size: 17px">
+				>>> dir(example)<br> ['__builtins__',<br> '__cached__',<br>
+				'__doc__',<br> '__file__',<br> '__initializing__',<br>
+				'__loader__',<br> '__name__',<br> '__package__',<br>
+				'add']<br>
+			<p class="main">
+				Here, we can see a sorted list of names (along with add). All other
+				names that begin with an underscore are default Python attributes
+				associated with the module (we did not define them ourself). <br>
+				For example, the __name__ attribute contains the name of the module.
+				<br>
+			<p class="example" style="font-size: 17px">
+				>>> import example<br> >>> example.__name__<br> 'example'<br>
+				All the names defined in our current namespace can be found out
+				using the dir() function without any arguments. <br>
+			<p class="example" style="font-size: 17px">
+				>>> a = 1<br> >>> b = "hello"<br> >>> import math<br>
+				>>> dir()<br> ['__builtins__', '__doc__', '__name__', 'a', 'b',
+				'math', 'pyscripter']<br>
 	</div>
-	<a href="/modules" class="previous">&laquo; Previous</a>
+	<a href="/global1" class="previous">&laquo; Previous</a>
 	<a href="#" class="previous1">Take Assessment</a>
-	<a href="/number" class="next">Next &raquo;</a>
+	<a href="/package" class="next">Next &raquo;</a>
 
 
 	<div class='w3-sidebar w3-collapse' id='sidenav'>
@@ -329,7 +485,7 @@ p.ex1 {
 					<a target="_top" href="/anonymous">Anonymous Function</a> <a
 						target="_top" href="/globalLocal">Global, Local and Nonlocal</a> <a
 						target="_top" href="/global1">Global Keyword</a> <a target="_top"
-						href="/modules">Modules</a> <a target="_top" a class="active"
+						a class="active" href="/modules">Modules</a> <a target="_top"
 						href="/package">Package</a>
 				<p class="main1">
 					Datatypes<br>

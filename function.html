@@ -216,85 +216,212 @@ p.ex1 {
 <body style="width: 95%">
 
 	<div class="main">
-		<h1 align="center" style="color: #33adff;">Python Package</h1>
-		<br>
+		<h1 align="center" style="color: #33adff;">Python Functions</h1>
 		<p class="main">
 		<h3 style="font-size: 25px">
 			<ul>
 				<ul>
-					<ul>What are packages?
+					<ul>What is a function in Python?
 					</ul>
 		</h3>
 		<p class="main">
-			We don't usually store all of our files in our computer in the same
-			location. We use a well-organized hierarchy of directories for easier
-			access. <br>
-			<br> Similar files are kept in the same directory, for example,
-			we may keep all the songs in the "music" directory. Analogous to
-			this, Python has packages for directories and modules for files. <br>
-			<br> As our application program grows larger in size with a lot
-			of modules, we place similar modules in one package and different
-			modules in different packages. This makes a project (program) easy to
-			manage and conceptually clear. <br>
-			<br> Similar, as a directory can contain sub-directories and
-			files, a Python package can have sub-packages and modules. <br>
-			<br> A directory must contain a file named __init__.py in order
-			for Python to consider it as a package. This file can be left empty
-			but we generally place the initialization code for that package in
-			this file. <br>
-			<br> Here is an example. Suppose we are developing a game, one
-			possible organization of packages and modules could be as shown in
-			the figure below.<br>
+			In Python, function is a group of related statements that perform a
+			specific task. <br> Functions help break our program into
+			smaller and modular chunks. As our program grows larger and larger,
+			functions make it more organized and manageable. <br>
+			Furthermore, it avoids repetition and makes code reusable.<br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						Syntax of Function
+						<br>
+					</ul>
+		</h3>
+		<p class="example" style="font-size: 17px">
+			def function_name(parameters):<br> """docstring"""<br>
+			statement(s)<br>
+		<p class="main">
+			Above shown is a function definition which consists of following
+			components.<br> <br> 1. Keyword def marks the start of
+			function header.<br> 2. A function name to uniquely identify it.
+			Function naming follows the same rules of writing identifiers in
+			Python.<br> 3. Parameters (arguments) through which we pass
+			values to a function. They are optional.<br> 4. A colon (:) to
+			mark the end of function header.<br> 5. Optional documentation
+			string (docstring) to describe what the function does.<br> 6.
+			One or more valid python statements that make up the function body.
+			Statements must have same indentation level (usually 4 spaces).<br>
+			7. An optional return statement to return a value from the function.<br>
+			<br>
+		<p class="example" style="font-size: 17px">
+			Example of a function<br> def greet(name):<br> """This
+			function greets to<br> the person passed in as<br>
+			parameter"""<br> print("Hello, " + name + ". Good morning!")<br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						How to call a function in python?
+						<br>
+					</ul>
+		</h3>
+
+		<p class="main">Once we have defined a function, we can call it
+			from another function, program or even the Python prompt. To call a
+			function we simply type the function name with appropriate
+			parameters.
+		<p class="example" style="font-size: 17px">>>> greet('Paul')
+			Hello, Paul. Good morning!
+		<p class="main">Note: Try running the above code into the Python
+			shell to see the output.
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						Docstring
+						<br>
+					</ul>
+		</h3>
+		<p class="main">
+			The first string after the function header is called the docstring
+			and is short for documentation string. It is used to explain in
+			brief, what a function does. <br> Although optional,
+			documentation is a good programming practice. Unless you can remember
+			what you had for dinner last week, always document your code. <br>
+
+			In the above example, we have a docstring immediately below the
+			function header. We generally use triple quotes so that docstring can
+			extend up to multiple lines. This string is available to us as
+			__doc__ attribute of the function. <br> <br> For example: <br>
+
+			Try running the following into the Python shell to see the output. <br>
+		<p class="example" style="font-size: 17px">
+			>>> print(greet.__doc__)<br> This function greets to<br>
+			the person passed into the<br> name parameter<br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						The return statement
+						<br>
+					</ul>
+		</h3>
+
+		<p class="main">
+			The return statement is used to exit a function and go back to the
+			place from where it was called.<br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						Syntax of return
+						<br>
+					</ul>
+		</h3>
+		<p class="example" style="font-size: 17px">
+			return [expression_list]<br>
+		<p class="main">This statement can contain expression which gets
+			evaluated and the value is returned. If there is no expression in the
+			statement or the return statement itself is not present inside a
+			function, then the function will return the None object. For example:
+
+
+		<p class="example" style="font-size: 17px">>>> print(greet("May"))
+			Hello, May. Good morning! None
+		<p class="main">Here, None is the returned value.
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						Example of return
+						<br>
+					</ul>
+		</h3>
+
+		<p class="example" style="font-size: 17px">
+			def absolute_value(num):<br> """This function returns the
+			absolute<br> value of the entered number"""<br> <br>
+			if num >= 0:<br> return num<br> else:<br> return -num<br>
+			<br> # Output: 2<br> print(absolute_value(2))<br> <br>
+			# Output: 4<br> print(absolute_value(-4))<br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						How Function works in Python?
+						<br>
+					</ul>
+		</h3>
+
 		<p align="center" class="main">
-			<img class="img-responsive" src="static/img/970x647/19.jpg"
+			<img class="img-responsive" src="static/img/970x647/18.jpg"
 				alt="Python Image">
 		<p class="main">
 		<h3 style="font-size: 25px">
 			<ul>
 				<ul>
-					<ul>Importing module from a package
+					<ul>
+						Scope and Lifetime of variables
+						<br>
+					</ul>
+		</h3>
+
+		<p class="main">
+			Scope of a variable is the portion of a program where the variable is
+			recognized. Parameters and variables defined inside a function is not
+			visible from outside. Hence, they have a local scope. <br>
+			Lifetime of a variable is the period throughout which the variable
+			exits in the memory. The lifetime of variables inside a function is
+			as long as the function executes. <br> They are destroyed once
+			we return from the function. Hence, a function does not remember the
+			value of a variable from its previous calls. <br> Here is an
+			example to illustrate the scope of a variable inside a function. <br>
+		<p class="example" style="font-size: 17px">
+			def my_func():<br> x = 10<br> print("Value inside
+			function:",x)<br> <br> x = 20<br> my_func()<br>
+			print("Value outside function:",x)<br>
+		<p class="main">
+			Output<br>
+		<p class="example" style="font-size: 17px">
+			Value inside function: 10<br> Value outside function: 20<br>
+		<p class="main">
+			Here, we can see that the value of x is 20 initially. Even though the
+			function my_func() changed the value of x to 10, it did not effect
+			the value outside the function. <br> This is because the
+			variable x inside the function is different (local to the function)
+			from the one outside. Although they have same names, they are two
+			different variables with different scope. <br> On the other
+			hand, variables outside of the function are visible from inside. They
+			have a global scope. <br> We can read these values from inside
+			the function but cannot change (write) them. In order to modify the
+			value of variables outside the function, they must be declared as
+			global variables using the keyword global. <br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						Types of Functions
+						<br>
 					</ul>
 		</h3>
 		<p class="main">
-		<p class="main">
-			We can import modules from packages using the dot (.) operator. <br>
-			For example, if want to import the start module in the above example,
-			it is done as follows. <br>
-		<p class="example" style="font-size: 17px">
-			import Game.Level.start<br>
-		<p class="main">
-			Now if this module contains a function named select_difficulty(), we
-			must use the full name to reference it.<br>
-		<p class="example" style="font-size: 17px">
-			Game.Level.start.select_difficulty(2)<br>
-		<p class="main">
-			If this construct seems lengthy, we can import the module without the
-			package prefix as follows. <br>
-		<p class="example" style="font-size: 17px">
-			from Game.Level import start<br>
-		<p class="main">
-			We can now call the function simply as follows. <br>
-		<p class="example" style="font-size: 17px">
-			start.select_difficulty(2)<br>
-		<p class="main">
-			Yet another way of importing just the required function (or class or
-			variable) form a module within a package would be as follows.<br>
-		<p class="example" style="font-size: 17px">
-			from Game.Level.start import select_difficulty<br>
-		<p class="main">
-			Now we can directly call this function.<br>
-		<p class="example" style="font-size: 17px">
-			select_difficulty(2)<br>
-		<p class="main">
-			Although easier, this method is not recommended. Using the full
-			namespace avoids confusion and prevents two same identifier names
-			from colliding. <br> While importing packages, Python looks in
-			the list of directories defined in sys.path, similar as for module
-			search path.<br>
+			Basically, we can divide functions into the following two types:<br>
+			<br> 1. Built-in functions - Functions that are built into
+			Python.<br> 2. User-defined functions - Functions defined by the
+			users themselves.<br>
 	</div>
-	<a href="/modules" class="previous">&laquo; Previous</a>
+	<a href="/pass1" class="previous">&laquo; Previous</a>
 	<a href="#" class="previous1">Take Assessment</a>
-	<a href="/number" class="next">Next &raquo;</a>
+	<a href="/argument" class="next">Next &raquo;</a>
 
 
 	<div class='w3-sidebar w3-collapse' id='sidenav'>
@@ -324,12 +451,12 @@ p.ex1 {
 				<p class="main1">
 					Functions<br>
 				<p>
-					<a target="_top" href="/function">Function</a> <a target="_top"
-						href="/argument">Argument</a> <a target="_top" href="/recursion">Recursion</a>
-					<a target="_top" href="/anonymous">Anonymous Function</a> <a
-						target="_top" href="/globalLocal">Global, Local and Nonlocal</a> <a
-						target="_top" href="/global1">Global Keyword</a> <a target="_top"
-						href="/modules">Modules</a> <a target="_top" a class="active"
+					<a target="_top" a class="active" href="/function">Function</a> <a
+						target="_top" href="/argument">Argument</a> <a target="_top"
+						href="/recursion">Recursion</a> <a target="_top" href="/anonymous">Anonymous
+						Function</a> <a target="_top" href="/globalLocal">Global, Local
+						and Nonlocal</a> <a target="_top" href="/global1">Global Keyword</a> <a
+						target="_top" href="/modules">Modules</a> <a target="_top"
 						href="/package">Package</a>
 				<p class="main1">
 					Datatypes<br>

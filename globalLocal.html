@@ -216,85 +216,189 @@ p.ex1 {
 <body style="width: 95%">
 
 	<div class="main">
-		<h1 align="center" style="color: #33adff;">Python Package</h1>
+		<h1 align="center" style="color: #33adff;">Python Global, Local
+			and Nonlocal variables</h1>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Global Variables
+					</ul>
+		</h3>
+		<p class="main">
+			In Python, a variable declared outside of the function or in global
+			scope is known as global variable. This means, global variable can be
+			accessed inside or outside of the function. <br>
+			<br> Let's see an example on how a global variable is created in
+			Python.<br>
+		<p class="example" style="font-size: 17px">
+			x = "global"<br> <br> def foo():<br> print("x inside
+			:", x)<br> <br> foo()<br> print("x outside:", x) <br>
+		<p class="main">
+			When we run the code, the will output be: <br>
+		<p class="example" style="font-size: 17px">
+			x inside : global<br> x outside: global <br>
+		<p class="main">
+			In above code, we created x as a global variable and defined a foo()
+			to print the global variable x. Finally, we call the foo() which will
+			print the value of x. <br> What if you want to change value of x
+			inside a function? <br>
+		<p class="example" style="font-size: 17px">
+			x = "global"<br> <br> def foo():<br> x = x * 2<br>
+			print(x)<br> foo()<br>
+		<p class="main">
+			When we run the code, the will output be: <br>
+		<p class="example" style="font-size: 17px">
+			UnboundLocalError: local variable 'x' referenced before assignment<br>
+		<p class="main">
+			The output shows an error because Python treats x as a local variable
+			and x is also not defined inside foo(). <br> To make this work
+			we use global keyword, to learn more visit Python Global Keyword. <br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Local Variables
+					</ul>
+		</h3>
 		<br>
 		<p class="main">
-		<h3 style="font-size: 25px">
-			<ul>
-				<ul>
-					<ul>What are packages?
-					</ul>
-		</h3>
-		<p class="main">
-			We don't usually store all of our files in our computer in the same
-			location. We use a well-organized hierarchy of directories for easier
-			access. <br>
-			<br> Similar files are kept in the same directory, for example,
-			we may keep all the songs in the "music" directory. Analogous to
-			this, Python has packages for directories and modules for files. <br>
-			<br> As our application program grows larger in size with a lot
-			of modules, we place similar modules in one package and different
-			modules in different packages. This makes a project (program) easy to
-			manage and conceptually clear. <br>
-			<br> Similar, as a directory can contain sub-directories and
-			files, a Python package can have sub-packages and modules. <br>
-			<br> A directory must contain a file named __init__.py in order
-			for Python to consider it as a package. This file can be left empty
-			but we generally place the initialization code for that package in
-			this file. <br>
-			<br> Here is an example. Suppose we are developing a game, one
-			possible organization of packages and modules could be as shown in
-			the figure below.<br>
-		<p align="center" class="main">
-			<img class="img-responsive" src="static/img/970x647/19.jpg"
-				alt="Python Image">
+			A variable declared inside the function's body or in the local scope
+			is known as local variable. <br>
 		<p class="main">
 		<h3 style="font-size: 25px">
 			<ul>
 				<ul>
-					<ul>Importing module from a package
+					<ul>Example 2: Accessing local variable outside the scope
+					</ul>
+		</h3>
+
+		<p class="example" style="font-size: 17px">
+			def foo():<br> y = "local"<br> <br> foo()<br>
+			print(y)<br>
+		<p class="main">When we run the code, the will output be:
+		<p class="example" style="font-size: 17px">NameError: name 'y' is
+			not defined The output shows an error, because we are trying to
+			access a local variable y in a global scope whereas the local
+			variable only works inside foo() or local scope.
+		<p class="main">Let's see an example on how a local variable is
+			created in Python.
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Example 3: Create a Local Variable
 					</ul>
 		</h3>
 		<p class="main">
-		<p class="main">
-			We can import modules from packages using the dot (.) operator. <br>
-			For example, if want to import the start module in the above example,
-			it is done as follows. <br>
+			Normally, we declare a variable inside the function to create a local
+			variable. <br>
 		<p class="example" style="font-size: 17px">
-			import Game.Level.start<br>
-		<p class="main">
-			Now if this module contains a function named select_difficulty(), we
-			must use the full name to reference it.<br>
+			def foo():<br> y = "local"<br> print(y)<br> <br>
+			foo()<br>
+		<p class="main">When we run the code, the will output be:
 		<p class="example" style="font-size: 17px">
-			Game.Level.start.select_difficulty(2)<br>
+			local<br>
+		<p class="main">Let's take a look to the earlier problem where x
+			was a global variable and we wanted to modify x inside foo().
 		<p class="main">
-			If this construct seems lengthy, we can import the module without the
-			package prefix as follows. <br>
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Global and local variables
+					</ul>
+		</h3>
+
+		<p class="main">Here, we will show how to use global variables and
+			local variables in the same code.
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Example 4: Using Global and Local variables in same code
+					</ul>
+		</h3>
 		<p class="example" style="font-size: 17px">
-			from Game.Level import start<br>
+			x = "global"<br> <br> def foo():<br> global x<br>
+			y = "local"<br> x = x * 2<br> print(x)<br> print(y)<br>
+			<br> foo()<br>
 		<p class="main">
-			We can now call the function simply as follows. <br>
+			When we run the code, the will output be: <br>
 		<p class="example" style="font-size: 17px">
-			start.select_difficulty(2)<br>
+			global global <br> local<br>
 		<p class="main">
-			Yet another way of importing just the required function (or class or
-			variable) form a module within a package would be as follows.<br>
+			In the above code, we declare x as a global and y as a local variable
+			in the foo(). Then, we use multiplication operator * to modify the
+			global variable x and we print both x and y. <br> After calling
+			the foo(), the value of x becomes global global because we used the x
+			* 2 to print two times global. After that, we print the value of
+			local variable y i.e local. <br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						Example 5: Global variable and Local variable with same name
+						<br>
+					</ul>
+		</h3>
 		<p class="example" style="font-size: 17px">
-			from Game.Level.start import select_difficulty<br>
+			x = 5<br> <br> def foo():<br> x = 10<br>
+			print("local x:", x)<br> <br> foo()<br> print("global
+			x:", x)<br>
+		<p class="main">When we run the code, the will output be:
+		<p class="example" style="font-size: 17px">local x: 10 global x: 5
+
 		<p class="main">
-			Now we can directly call this function.<br>
+			In above code, we used same name x for both global variable and local
+			variable. We get different result when we print same variable because
+			the variable is declared in both scopes, i.e. the local scope inside
+			foo() and global scope outside foo(). <br> When we print the
+			variable inside the foo() it outputs local x: 10, this is called
+			local scope of variable. <br> Similarly, when we print the
+			variable outside the foo(), it outputs global x: 5, this is called
+			global scope of variable. <br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Nonlocal Variables
+					</ul>
+		</h3>
+		<br>
+
+		<p class="main">
+			Nonlocal variable are used in nested function whose local scope is
+			not defined. This means, the variable can be neither in the local nor
+			the global scope. <br> Let's see an example on how a global
+			variable is created in Python. <br> We use nonlocal keyword to
+			create nonlocal variable. <br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>Example 6: Create a nonlocal variable
+					</ul>
+		</h3>
+		<br>
 		<p class="example" style="font-size: 17px">
-			select_difficulty(2)<br>
+			def outer():<br> x = "local"<br> <br> def inner():<br>
+			nonlocal x<br> x = "nonlocal"<br> print("inner:", x)<br>
+			<br> inner()<br> print("outer:", x)<br> <br>
+			outer()<br>
+		<p class="main">When we run the code, the will output be:
+		<p class="example" style="font-size: 17px">inner: nonlocal outer:
+			nonlocal
 		<p class="main">
-			Although easier, this method is not recommended. Using the full
-			namespace avoids confusion and prevents two same identifier names
-			from colliding. <br> While importing packages, Python looks in
-			the list of directories defined in sys.path, similar as for module
-			search path.<br>
+			In the above code there is a nested function inner(). We use nonlocal
+			keyword to create nonlocal variable. The inner() function is defined
+			in the scope of another function outer(). <br> Note : If we
+			change value of nonlocal variable, the changes appears in the local
+			variable. <br>
 	</div>
-	<a href="/modules" class="previous">&laquo; Previous</a>
+	<a href="/anonymous" class="previous">&laquo; Previous</a>
 	<a href="#" class="previous1">Take Assessment</a>
-	<a href="/number" class="next">Next &raquo;</a>
+	<a href="/global1" class="next">Next &raquo;</a>
 
 
 	<div class='w3-sidebar w3-collapse' id='sidenav'>
@@ -327,10 +431,10 @@ p.ex1 {
 					<a target="_top" href="/function">Function</a> <a target="_top"
 						href="/argument">Argument</a> <a target="_top" href="/recursion">Recursion</a>
 					<a target="_top" href="/anonymous">Anonymous Function</a> <a
-						target="_top" href="/globalLocal">Global, Local and Nonlocal</a> <a
-						target="_top" href="/global1">Global Keyword</a> <a target="_top"
-						href="/modules">Modules</a> <a target="_top" a class="active"
-						href="/package">Package</a>
+						target="_top" a class="active" href="/globalLocal">Global,
+						Local and Nonlocal</a> <a target="_top" href="/global1">Global
+						Keyword</a> <a target="_top" href="/modules">Modules</a> <a
+						target="_top" href="/package">Package</a>
 				<p class="main1">
 					Datatypes<br>
 				<p>

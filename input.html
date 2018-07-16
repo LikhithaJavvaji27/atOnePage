@@ -216,85 +216,166 @@ p.ex1 {
 <body style="width: 95%">
 
 	<div class="main">
-		<h1 align="center" style="color: #33adff;">Python Package</h1>
-		<br>
+		<h1 align="center" style="color: #33adff;">PYTHON INPUT, OUTPUT
+			AND IMPORT</h1>
+		<p class="main">
+			Python provides numerous built-in functions that are readily
+			available to us at the Python prompt. <br> Some of the functions
+			like input() and print() are widely used for standard input and
+			output operations respectively. Let us see the output section first.
+
+
 		<p class="main">
 		<h3 style="font-size: 25px">
 			<ul>
 				<ul>
-					<ul>What are packages?
+					<ul>☛ Python Output Using print() function
 					</ul>
 		</h3>
 		<p class="main">
-			We don't usually store all of our files in our computer in the same
-			location. We use a well-organized hierarchy of directories for easier
-			access. <br>
-			<br> Similar files are kept in the same directory, for example,
-			we may keep all the songs in the "music" directory. Analogous to
-			this, Python has packages for directories and modules for files. <br>
-			<br> As our application program grows larger in size with a lot
-			of modules, we place similar modules in one package and different
-			modules in different packages. This makes a project (program) easy to
-			manage and conceptually clear. <br>
-			<br> Similar, as a directory can contain sub-directories and
-			files, a Python package can have sub-packages and modules. <br>
-			<br> A directory must contain a file named __init__.py in order
-			for Python to consider it as a package. This file can be left empty
-			but we generally place the initialization code for that package in
-			this file. <br>
-			<br> Here is an example. Suppose we are developing a game, one
-			possible organization of packages and modules could be as shown in
-			the figure below.<br>
-		<p align="center" class="main">
-			<img class="img-responsive" src="static/img/970x647/19.jpg"
-				alt="Python Image">
+			We use the print() function to output data to the standard output
+			device (screen). <br> We can also output data to a file, but
+			this will be discussed later. An example use is given below. <br>
+		<p class="example" style="font-size: 17px">
+			print('This sentence is output to the screen')<br> # Output:
+			This sentence is output to the screen<br> <br> a = 5<br>
+			<br> print('The value of a is', a)<br> # Output: The value
+			of a is 5<br>
+		<p class="main">
+			In the second print() statement, we can notice that a space was added
+			between the string and the value of variable a.This is by default,
+			but we can change it. <br> The actual syntax of the print()
+			function is
+		<p class="example" style="font-size: 17px">
+			<br>print(*objects, sep=' ', end='\n', file=sys.stdout,
+			flush=False)<br> <br>
+		<p class="main">
+			Here, objects is the value(s) to be printed. <br> The sep
+			separator is used between the values. It defaults into a space
+			character. <br> After all values are printed, end is printed. It
+			defaults into a new line. <br> The file is the object where the
+			values are printed and its default value is sys.stdout (screen). Here
+			are an example to illustrate this. <br>
+		<p class="example" style="font-size: 17px">
+			print(1,2,3,4)<br> # Output: 1 2 3 4<br> <br>
+			print(1,2,3,4,sep='*')<br> # Output: 1*2*3*4<br> <br>
+			print(1,2,3,4,sep='#',end='&')<br> # Output: 1#2#3#4&<br> <br>
 		<p class="main">
 		<h3 style="font-size: 25px">
 			<ul>
 				<ul>
-					<ul>Importing module from a package
+					<ul>
+						<ul>Output formatting
+						</ul>
+		</h3>
+		<p class="main">Sometimes we would like to format our output to
+			make it look attractive. This can be done by using the str.format()
+			method. This method is visible to any string object.
+		<p class="example" style="font-size: 17px">
+			>>> x = 5; y = 10<br> >>> print('The value of x is {} and y is
+			{}'.format(x,y))<br> The value of x is 5 and y is 10<br> <br>
+		<p class="main">Here the curly braces {} are used as placeholders.
+			We can specify the order in which it is printed by using numbers
+			(tuple index).
+		<p class="example" style="font-size: 17px">
+			print('I love {0} and {1}'.format('bread','butter'))<br> #
+			Output: I love bread and butter<br> <br> print('I love {1}
+			and {0}'.format('bread','butter')) <br># Output: I love butter
+			and bread<br>
+		<p class="main">We can even use keyword arguments to format the
+			string.
+		<p class="example" style="font-size: 17px">
+			>>> print('Hello {name}, {greeting}'.format(greeting = 'Goodmorning',
+			name = 'John'))<br> Hello John, Goodmorning<br>
+		<p class="main">We can even format strings like the old sprintf()
+			style used in C programming language. We use the % operator to
+			accomplish this.
+		<p class="example" style="font-size: 17px">
+			>>> x = 12.3456789<br> >>> print('The value of x is %3.2f' %x)<br>
+			The value of x is 12.35<br> <br>>>> print('The value of x
+			is %3.4f' %x)<br> The value of x is 12.3457<br> <br>
+		<p class="main">
+		<h3 style="font-size: 25px">
+			<ul>
+				<ul>
+					<ul>
+						<br>☛ Python Input
 					</ul>
 		</h3>
 		<p class="main">
-		<p class="main">
-			We can import modules from packages using the dot (.) operator. <br>
-			For example, if want to import the start module in the above example,
-			it is done as follows. <br>
+			Up till now, our programs were static. The value of variables were
+			defined or hard coded into the source code. <br> To allow
+			flexibility we might want to take the input from the user. In Python,
+			we have the input() function to allow this. The syntax for input() is
+			<br>
 		<p class="example" style="font-size: 17px">
-			import Game.Level.start<br>
+			input([prompt])<br> <br>
 		<p class="main">
-			Now if this module contains a function named select_difficulty(), we
-			must use the full name to reference it.<br>
+			where prompt is the string we wish to display on the screen. It is
+			optional.<br>
 		<p class="example" style="font-size: 17px">
-			Game.Level.start.select_difficulty(2)<br>
+			>>> num = input('Enter a number: ')<br> Enter a number: 10<br>
+			>>> num<br> '10'<br>
 		<p class="main">
-			If this construct seems lengthy, we can import the module without the
-			package prefix as follows. <br>
+			Here, we can see that the entered value 10 is a string, not a number.
+			To convert this into a number we can use int() or float() functions.
+			<br>
 		<p class="example" style="font-size: 17px">
-			from Game.Level import start<br>
+			>>> int('10')<br> 10<br> >>> float('10')<br> 10.0<br>
 		<p class="main">
-			We can now call the function simply as follows. <br>
+			This same operation can be performed using the eval() function. But
+			it takes it further. It can evaluate even expressions, provided the
+			input is a string <br>
 		<p class="example" style="font-size: 17px">
-			start.select_difficulty(2)<br>
-		<p class="main">
-			Yet another way of importing just the required function (or class or
-			variable) form a module within a package would be as follows.<br>
-		<p class="example" style="font-size: 17px">
-			from Game.Level.start import select_difficulty<br>
-		<p class="main">
-			Now we can directly call this function.<br>
-		<p class="example" style="font-size: 17px">
-			select_difficulty(2)<br>
-		<p class="main">
-			Although easier, this method is not recommended. Using the full
-			namespace avoids confusion and prevents two same identifier names
-			from colliding. <br> While importing packages, Python looks in
-			the list of directories defined in sys.path, similar as for module
-			search path.<br>
+			>>> int('2+3')<br> Traceback (most recent call last):<br>
+			File "
+			<string>", line 301, in runcode<br>
+			File "<interactive input>", line 1, in <module>
+			<br>
+			ValueError: invalid literal for int() with base 10: '2+3'<br>
+			>>> eval('2+3')<br>
+			5<br>
+
+			<p class="main">
+			<h3 style="font-size: 25px">
+				<ul>
+					<ul>
+						<ul>
+							<br>☛ Python Import
+						</ul>
+			</h3>
+			<p class="main">
+				When our program grows bigger, it is a good idea to break it into
+				different modules. <br> A module is a file containing Python
+				definitions and statements. Python modules have a filename and end
+				with the extension .py. <br> Definitions inside a module can be
+				imported to another module or the interactive interpreter in Python.
+				We use the import keyword to do this. <br> For example, we can
+				import the math module by typing in import math. <br>
+			<p class="example" style="font-size: 17px">
+				import math <br> print(math.pi) <br>
+			<p class="main">
+				Now all the definitions inside math module are available in our
+				scope. We can also import some specific attributes and functions
+				only, using the from keyword. For example: <br>
+			<p class="example" style="font-size: 17px">
+				>>> from math import pi <br> >>> pi <br> 3.141592653589793
+				<br>
+			<p class="main">
+				While importing a module, Python looks at several places defined in
+				sys.path. It is a list of directory locations. <br>
+			<p class="example" style="font-size: 17px">
+				>>> import sys <br> >>> sys.path <br> ['', <br>
+				'C:\\Python33\\Lib\\idlelib', <br>
+				'C:\\Windows\\system32\\python33.zip', <br>
+				'C:\\Python33\\DLLs', <br> 'C:\\Python33\\lib', <br>
+				'C:\\Python33', <br> 'C:\\Python33\\lib\\site-packages']<br>
+			<p class="main">
+				We can add our own location to this list as well.<br>
 	</div>
-	<a href="/modules" class="previous">&laquo; Previous</a>
+	<a href="/typeConversion" class="previous">&laquo; Previous</a>
 	<a href="#" class="previous1">Take Assessment</a>
-	<a href="/number" class="next">Next &raquo;</a>
+	<a href="/operators" class="next">Next &raquo;</a>
 
 
 	<div class='w3-sidebar w3-collapse' id='sidenav'>
@@ -310,8 +391,8 @@ p.ex1 {
 						href="/domain">Domain</a> <a target="_top" href="/syntax">Basic
 						syntax</a> <a target="_top" href="/variables">Variables</a> <a
 						target="_top" href="/dataTypes">Data Types</a> <a target="_top"
-						href="/typeConversion">Type Conversion</a> <a target="_top"
-						href="/input">I/O and Import</a> <a target="_top"
+						href="/typeConversion">Type Conversion</a> <a target="_top" a
+						class="active" href="/input">I/O and Import</a> <a target="_top"
 						href="/operators">Operators</a> <a target="_top" href="/nameSpace">Name
 						Space</a>
 				<p class="main1">
@@ -329,8 +410,7 @@ p.ex1 {
 					<a target="_top" href="/anonymous">Anonymous Function</a> <a
 						target="_top" href="/globalLocal">Global, Local and Nonlocal</a> <a
 						target="_top" href="/global1">Global Keyword</a> <a target="_top"
-						href="/modules">Modules</a> <a target="_top" a class="active"
-						href="/package">Package</a>
+						href="/modules">Modules</a> <a target="_top" href="/package">Package</a>
 				<p class="main1">
 					Datatypes<br>
 				<p>

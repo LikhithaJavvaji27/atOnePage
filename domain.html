@@ -53,7 +53,7 @@ a:hover {
 
 .previous1 {
 	border-radius: 8px;
-	margin: 24px -30px;
+	margin: 24px 8px;
 	padding: 12px 34px;
 	font-size: 18px;
 	background-color: #ff6699;
@@ -71,7 +71,7 @@ a:hover {
 
 .next {
 	border-radius: 8px;
-	margin: 24px 180px;
+	margin: 24px 170px;
 	padding: 12px 34px;
 	font-size: 20px;
 	background-color: #4dff4d;
@@ -80,6 +80,12 @@ a:hover {
 
 .main {
 	margin-left: 120px;
+	font-size: 20px;
+	color: #000000; /* Same as the width of the sidenav */
+}
+
+.main1 {
+	margin-left: 50px;
 	font-size: 20px;
 	color: #000000; /* Same as the width of the sidenav */
 }
@@ -143,26 +149,6 @@ a:hover {
 .p {
 	text-color: #ff0000;
 }
-
-table, th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
-}
-
-th, td {
-	padding: 5px;
-	text-align: left;
-}
-
-p.ex1 {
-	margin-right: 50px;
-}
-
-.main1 {
-	margin-left: 50px;
-	font-size: 20px;
-	color: #000000; /* Same as the width of the sidenav */
-}
 </style>
 </head>
 <!-- END HEAD -->
@@ -213,88 +199,100 @@ p.ex1 {
 	<BR>
 	<BR>
 	<BR>
-<body style="width: 95%">
+<body>
 
 	<div class="main">
-		<h1 align="center" style="color: #33adff;">Python Package</h1>
-		<br>
+		<h1 align="center" style="color: #33adff;">Python Programming
+			Domains.</h1>
+
+
 		<p class="main">
-		<h3 style="font-size: 25px">
+		<h3>
 			<ul>
 				<ul>
-					<ul>What are packages?
+					<ul>☛ Web Application Development.
 					</ul>
 		</h3>
 		<p class="main">
-			We don't usually store all of our files in our computer in the same
-			location. We use a well-organized hierarchy of directories for easier
-			access. <br>
-			<br> Similar files are kept in the same directory, for example,
-			we may keep all the songs in the "music" directory. Analogous to
-			this, Python has packages for directories and modules for files. <br>
-			<br> As our application program grows larger in size with a lot
-			of modules, we place similar modules in one package and different
-			modules in different packages. This makes a project (program) easy to
-			manage and conceptually clear. <br>
-			<br> Similar, as a directory can contain sub-directories and
-			files, a Python package can have sub-packages and modules. <br>
-			<br> A directory must contain a file named __init__.py in order
-			for Python to consider it as a package. This file can be left empty
-			but we generally place the initialization code for that package in
-			this file. <br>
-			<br> Here is an example. Suppose we are developing a game, one
-			possible organization of packages and modules could be as shown in
-			the figure below.<br>
-		<p align="center" class="main">
-			<img class="img-responsive" src="static/img/970x647/19.jpg"
-				alt="Python Image">
+			Python has the lion’s share in the field of web development. Many
+			employers look for full-stack programmers who know Python. And you
+			can become one of them by learning frameworks (WAF) like Django,
+			Flask, CherryPy, and Bottle which give extensive support for web
+			development. All of these are developed using Python. These
+			frameworks deliver essential features to simplify tasks related to
+			content management, accessing backend database, and handling network
+			protocols like HTTP, SMTP, XML-RPC, FTP, and POP. Some of the known
+			online products created in Python are Plone (Content Management
+			System), Zope application server, Quixote web framework, and ERP5, an
+			open source enterprise solution used in the aerospace field.
+			Scientific And Numeric Computing.<br> Python has become the
+			obvious choice for working in Scientific and Numeric Applications.
+			And there are multiple reasons for this advancement. First and
+			foremost is that Python is a free and open source language. And it
+			allows to modify and redistribute its source code. <br> Next,
+			the reason for becoming it more dominant in the field of Scientific
+			and Numeric is the rapidly growing number of specialized modules like
+			NumPy, SciPy, Pandas, matplotlib, and IPython. All of these are
+			available for free and provide a fair alternative to paid products
+			like Matlab. <br> Hence, Python is becoming a leader in this
+			field. The focus of Python language is to bring more productivity and
+			increase readability.
 		<p class="main">
-		<h3 style="font-size: 25px">
+		<h3>
 			<ul>
 				<ul>
-					<ul>Importing module from a package
+					<ul>☛ GUI Programming.
 					</ul>
 		</h3>
+		<p class="main">Python has some inherent qualities like clean and
+			straightforward coding syntax as well as dynamic typing support.
+			These work as the catalyst while developing complex GUI and image
+			processing applications. Python’s clean syntax and tremendous support
+			of many GUI libraries (like wxWidgets, pyqt or pyside) made
+			Programmers deliver graphics software like Inkscape, Scribus, Paint
+			Shop Pro, and GIMP. In addition to the 2D imaging solutions given
+			above, Python is even propelling many 3D animation software like 3ds
+			Max, Blender, Cinema 4D, Houdini, and Maya. These applications
+			integrate with Python for automation to speed up their workflows and
+			eliminate the need for doing them manually.
 		<p class="main">
+		<h3>
+			<ul>
+				<ul>
+					<ul>☛ Software Prototyping.
+					</ul>
+		</h3>
+		<p class="main">Python has many qualities that make it a natural
+			choice for prototyping. The first is being an open source programming
+			language, a massive no. of users follow and contribute to its
+			development. Further, the lightness, versatility, scalability, and
+			flexibility of refactoring code in Python speed up the development
+			process from the initial prototype. Hence, Python gives you an
+			easy-to-use interface to create prototypes. For example, with Pygame
+			(a multimedia library), you can prototype a game in different forms,
+			test, and tailor it to match your requirements. Finally, you can take
+			clues from the selected prototype and develop it using languages like
+			C++/Java.
 		<p class="main">
-			We can import modules from packages using the dot (.) operator. <br>
-			For example, if want to import the start module in the above example,
-			it is done as follows. <br>
-		<p class="example" style="font-size: 17px">
-			import Game.Level.start<br>
-		<p class="main">
-			Now if this module contains a function named select_difficulty(), we
-			must use the full name to reference it.<br>
-		<p class="example" style="font-size: 17px">
-			Game.Level.start.select_difficulty(2)<br>
-		<p class="main">
-			If this construct seems lengthy, we can import the module without the
-			package prefix as follows. <br>
-		<p class="example" style="font-size: 17px">
-			from Game.Level import start<br>
-		<p class="main">
-			We can now call the function simply as follows. <br>
-		<p class="example" style="font-size: 17px">
-			start.select_difficulty(2)<br>
-		<p class="main">
-			Yet another way of importing just the required function (or class or
-			variable) form a module within a package would be as follows.<br>
-		<p class="example" style="font-size: 17px">
-			from Game.Level.start import select_difficulty<br>
-		<p class="main">
-			Now we can directly call this function.<br>
-		<p class="example" style="font-size: 17px">
-			select_difficulty(2)<br>
-		<p class="main">
-			Although easier, this method is not recommended. Using the full
-			namespace avoids confusion and prevents two same identifier names
-			from colliding. <br> While importing packages, Python looks in
-			the list of directories defined in sys.path, similar as for module
-			search path.<br>
+		<h3>
+			<ul>
+				<ul>
+					<ul>☛ Professional Training.
+					</ul>
+		</h3>
+		<p class="main">Python is indeed the right programming language
+			for teaching and training purposes. It can be a stepping stone for
+			beginners to enter into the professional training. They can even
+			cover the overlapping areas like Data Analytics and Machine Learning.
+
+			Hence, there is a huge demand for professional trainers who can teach
+			both basic and advanced level Python programming. You can impart
+			training offline in a classroom or use tools like Skype or hangout to
+			do it online.
 	</div>
-	<a href="/modules" class="previous">&laquo; Previous</a>
+	<a href="/silent" class="previous">&laquo; Previous</a>
 	<a href="#" class="previous1">Take Assessment</a>
-	<a href="/number" class="next">Next &raquo;</a>
+	<a href="/syntax" class="next">Next &raquo;</a>
 
 
 	<div class='w3-sidebar w3-collapse' id='sidenav'>
@@ -307,9 +305,9 @@ p.ex1 {
 				<p>
 					<a target="_top" href="/python">Getting Started</a> <a
 						target="_top" href="/silent">Silent features</a> <a target="_top"
-						href="/domain">Domain</a> <a target="_top" href="/syntax">Basic
-						syntax</a> <a target="_top" href="/variables">Variables</a> <a
-						target="_top" href="/dataTypes">Data Types</a> <a target="_top"
+						a class="active" href="/domain">Domain</a> <a target="_top"
+						href="/syntax">Basic syntax</a> <a target="_top" href="/variables">Variables</a>
+					<a target="_top" href="/dataTypes">Data Types</a> <a target="_top"
 						href="/typeConversion">Type Conversion</a> <a target="_top"
 						href="/input">I/O and Import</a> <a target="_top"
 						href="/operators">Operators</a> <a target="_top" href="/nameSpace">Name
@@ -329,8 +327,7 @@ p.ex1 {
 					<a target="_top" href="/anonymous">Anonymous Function</a> <a
 						target="_top" href="/globalLocal">Global, Local and Nonlocal</a> <a
 						target="_top" href="/global1">Global Keyword</a> <a target="_top"
-						href="/modules">Modules</a> <a target="_top" a class="active"
-						href="/package">Package</a>
+						href="/modules">Modules</a> <a target="_top" href="/package">Package</a>
 				<p class="main1">
 					Datatypes<br>
 				<p>
